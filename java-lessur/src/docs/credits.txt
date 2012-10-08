@@ -1,0 +1,8 @@
+LESSUR was created utilising the following -
+>-- Engines --<
+- LWJGL
+- Slick2D
+- JBox2D
+
+>-- Graphics --<
+AI Wars Graphics Pack

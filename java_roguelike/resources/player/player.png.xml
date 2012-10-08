@@ -1,0 +1,6 @@
+<sheet>
+	<sprite name="fire1.png" x="0" y="0" width="64" height="64" />
+	<sprite name="fire2.png" x="64" y="0" width="64" height="64" />
+	<sprite name="fire3.png" x="128" y="0" width="64" height="64" />
+	<sprite name="fire4.png" x="192" y="0" width="64" height="64" />
+</sheet>

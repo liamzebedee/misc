@@ -1,0 +1,26 @@
+Top-Down Zombie Shooter
+
+-Objects
+	Player
+	Humans
+	Zombies
+	Items
+
+-Layers
+	Environment
+		Nothing on this layer has any mechanics, just for being pretty
+	Block
+		Collidables on this layer - walls
+			walls - nothing goes through
+			fences - can be broken, light goes through half
+			doors - can be broken, property=>closed
+
+ENGINE
+	Lighting
+	
+SteamFriends()->ActivateGameOverlay()
+
+CODE GOOD AT December 9, 10:45:19
+
+Design Principles
+- Run on many machines, in browser

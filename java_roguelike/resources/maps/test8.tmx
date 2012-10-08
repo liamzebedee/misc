@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="wall" tilewidth="32" tileheight="32">
+  <image source="tiles/test.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="2" name="wall2" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="asd" value="asdsad"/>
+  </properties>
+  <image source="tiles/test2.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="3" name="wall3" tilewidth="32" tileheight="32">
+  <image source="tiles/test3.png" width="32" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="asdad" value="asdasd"/>
+   </properties>
+  </tile>
+ </tileset>
+ <objectgroup color="#a4912f" name="Object Layer 1" width="100" height="100">
+  <object name="asdasd" x="471" y="69">
+   <polyline points="0,0 102,147 -61,98 131,38 236,97"/>
+  </object>
+  <object x="267" y="225">
+   <polygon points="0,0 115,32 -18,58"/>
+  </object>
+  <object x="252" y="75" width="110" height="111"/>
+  <object x="733" y="260" width="2" height="2"/>
+ </objectgroup>
+ <layer name="Tile Layer 1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt1VEKwyAQBUCtF+3RepQerYUmEBYFpYvtxww8TEAI7ENTyl518/cYq0Uf2Vopz3fuM3treL6GHO2Tx8xeffyXeln18RvxTJyrPvY67rHhHdV7J1cL6Z2DUfhenH8vvZnrI98579uRmT7i3PWRI3ax0of7Kl/sYuU/oY9cvbOxEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDoBYMZArU=
+  </data>
+ </layer>
+</map>

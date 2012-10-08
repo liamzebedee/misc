@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="structure-wall" tilewidth="32" tileheight="32">
+  <image source="wall.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="2" name="environment-grass" tilewidth="32" tileheight="32">
+  <image source="grass-old.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="3" name="environment-grass-swamp" tilewidth="32" tileheight="32">
+  <image source="grass.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="4" name="environment-grass-2" tilewidth="32" tileheight="32">
+  <image source="wall2.png" width="32" height="32"/>
+ </tileset>
+ <layer name="environment" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NiYGBgGsWjeBSP4lE8iknEAC9MrVpABgAA
+  </data>
+ </layer>
+ <objectgroup name="entity" width="20" height="20">
+  <object name="player" x="265" y="128" width="32" height="32"/>
+  <object type="light" x="290" y="300" width="32" height="31">
+   <properties>
+    <property name="colourB" value="32"/>
+    <property name="colourG" value="255"/>
+    <property name="colourR" value="255"/>
+    <property name="radius" value="0"/>
+   </properties>
+  </object>
+  <object type="zombie" x="462" y="216" width="32" height="32"/>
+  <object type="zombie" x="377" y="471" width="32" height="32"/>
+  <object type="zombie" x="173" y="446" width="32" height="32"/>
+  <object type="zombie" x="81" y="294" width="32" height="32"/>
+  <object type="zombie" x="115" y="86" width="32" height="32"/>
+  <object type="zombie" x="376" y="60" width="32" height="32"/>
+ </objectgroup>
+ <layer name="collidables" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgoB1gxIOpbc+oeZSZR834GQr+paZZ1DaPmgBfHsRnF7XdMdIBKeE5lMIeACzZg5lABgAA
+  </data>
+ </layer>
+ <objectgroup name="items" width="20" height="20"/>
+</map>
