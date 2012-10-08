@@ -1,0 +1,4 @@
+Last update - 20/09/2009
+
+* Prompt box on cancel bug fixed.
+* Tool tip feature added

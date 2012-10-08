@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<project basedir='.' default='all' name='EmonicDebugFrontend'>
+  <property name='build' value='bin'/>
+  <property name='src' value='src'/>
+  <property name='nant.settings.currentframework' value='mono-2.0'/>
+  <property name='debuggerLibs' value='/home/hkrapfenbauer/vimem/mono-bin/mono-1.2.6-bin/lib/mono/mono-debugger' />
+  <target name='all' depends='EmonicWebservice'/>
+  <target name='EmonicWebservice'>
+    <csc debug='true' optimize='false' output='${build}/EmonicWebservice.dll' target='library' warninglevel='4'>
+      <sources>
+	    <include name='${src}/EmonicInterpreter.cs'/>
+        <include name='${src}/EmonicWebservice.cs'/>
+        <include name='${src}/EmonicLineInterpreter.cs'/>
+        <include name='${src}/EmonicCommand.cs'/>
+      </sources>
+      <references>
+        <include name='System.Web.Services.dll'/>
+        <include name='${debuggerLibs}/Mono.Debugger.dll'/>
+        <include name='${debuggerLibs}/Mono.Debugger.Backend.dll'/>
+        <include name='${build}/mdb.exe'/>
+      </references>
+    </csc>
+  </target>
+</project>

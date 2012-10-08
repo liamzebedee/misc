@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>FAQ</title>
+</head>
+<body>
+<br>
+<h1>FAQ</h1>
+
+<h1>What is Emonic?</h1>
+<p>Emonic is an Eclipse plug-in for the C# language</p>
+<br>
+<h1>How do I install it?</h1>
+<p>
+You have two options:
+Add one of the following update sites to your Eclipse update configuration (Menu: Help - Software updates - Find and Install)
+</p>
+<table border=1>
+<tr><td><b>Adress</b></td><td><b>Location</b></td></tr>
+<tr><td>http://emonic.sourceforge.net/updatesite/internap/site.xml<td>San Jose, CA - North America</td></tr>
+<tr><td>http://emonic.sourceforge.net/updatesite/nchc/site.xml</td><td>Tainan, Taiwan - Asia</td></tr>
+<tr><td>http://emonic.sourceforge.net/updatesite/ovh/site.xml</td><td>Paris, France - Europe</td></tr>
+</table>
+and install it via update manager and adapt the preferences. <i> Or:</i>
+<p></p>
+<ul>
+  <li>Copy the emonic_VERSION.zip-file from sourceforge in Your Eclipse-dir</li>
+  <li>unpack it</li>
+  <li>start eclipse and adapt the preferences</li>
+</ul>
+<h1>There are quite more files on the download section of sourceforge - most .jar-files. How do I use these files?</h1>
+<p></p>
+The jar files are not intendet to be downloaded by hand. They are served by the update site: You get them automaticly if 
+You use one of the updatesites mentioned above.
+<h1>What does Emonic provide?</h1>
+<ul>
+  <li>a C# editor with syntax highlighting with code completion support</li>
+  <li>a wizard which adds each new C# file to an Apache Ant or NAnt build file</li>
+  <li>a build mechanism which invokes Ant or NAnt (which has to be installed separately)</li>
+</ul>
+<h1>What does Emonic not provide?</h1>
+<ul>
+  <li>A debugger -sorry!</li>
+  <li>Refactorings</li>
+  <li>A surface builder
+</ul>
+<h1>Which .NET implementations can I use?</h1>
+<p>Microsoft's implementation as well as <a href="http://www.mono-project.com/">Mono</a> :-) Emonic supports .net 1.* as well as .net 2.* and 3.*.</p>
+
+<h1>Which compiler is used to compile the sources?</h1>
+<p>Emonic does not use a compiler directly. The build mechanism writes creates a build file and invokes a build command on that build file.
+Thus, the compiler used is the compiler which is configured in the build's setup.
+At the moment, Apache Ant and NAnt is supported as a build mechanism. In the case of NAnt, you can choose the compiler 
+via a command line flag. You can write this flag in the Emonic preferences of the nant-start to force emonic to use this compiler. 
+</p>
+<br>
+</body>
+</html>

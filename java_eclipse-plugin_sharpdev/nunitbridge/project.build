@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<project basedir='.' default='all' name='nunit'>
+  <property name='nant.settings.currentframework' value='mono-1.0'/>
+  <property name='build' value='bin'/>
+  <property name='src' value='src'/>
+  <target depends='build' name='all'/>
+  <target depends='' name='build'>
+    <csc debug='true' optimize='true' output='${build}/NUnitBridge.exe' target='exe' warninglevel='4'>
+      <references>
+        <include name='nunit.core.dll'/>
+        <include name='nunit.framework.dll'/>
+        <include name='nunit.util.dll'/>
+</references>
+      <sources>
+        <include name='${src}/NUnitBridge.cs'/>
+</sources>
+</csc>
+</target>
+</project>

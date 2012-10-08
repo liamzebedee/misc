@@ -1,0 +1,11 @@
+General
+	- Research layout, typography etc. and apply to website
+	http://codex.wordpress.org/Custom_Headers
+	? http://codex.wordpress.org/Post_Formats
+	http://codex.wordpress.org/Custom_Backgrounds
+ui
+	- Swap to pageination
+	- Include easy home link
+	- Post navigation (left/right)
+Bugs
+	- reply to comment is messy layout

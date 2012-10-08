@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="remoteLaunching" name="Remote Launching" schema="schema/remoteLaunching.exsd"/>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="org.emonic.debug.internal.core.DotNetLaunchDelegate"
+            id="org.emonic.debug.core.dotNetApplication"
+            modes="run"
+            name=".NET Application">
+      </launchConfigurationType>
+   </extension>
+</plugin>

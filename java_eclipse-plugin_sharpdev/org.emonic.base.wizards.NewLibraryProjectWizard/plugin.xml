@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="emonic.dotNet"
+            class="org.emonic.base.wizards.newcsharplibraryprojectwizard.NewCSharpLibraryResourceWizard"
+            finalPerspective="org.emonic.base.emonicperspective"
+            hasPages="true"
+            icon="icons/newproject_wiz.gif"
+            id="org.emonic.base.wizards.NewCSharpLibraryProjectWizard.wizard1wizard"
+            name="C# Library Project"
+            project="true">
+      </wizard>
+   </extension>
+
+</plugin>

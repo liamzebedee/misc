@@ -1,0 +1,216 @@
+/*
+Theme Name: RawData
+Theme URI: http://dev.cryptum.net/rawdata/
+Description: A clean minamilistic theme to express data in it's rawest form, while retaining readability and style
+Author: Liam (liamzebedee) Edwards-Playne
+Author URI: http://cryptum.net/
+Version: 1.0
+Tags: fixed-width, translation-ready, threaded-comments, theme-options, full-width-template, one-column, two-columns, black, white
+
+Your theme can be your copyrighted work.
+Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
+ 
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+*/
+
+@import url('styles/normalize.css');
+
+/* =UI
+-------------------------------------------------------------- */
+html {
+	background-color: #EDF1F3;
+}
+
+body {
+	background-color: white;
+	
+	/* LAYOUT: Don't change these */
+	margin: 0 auto;
+	padding: 5px 5px 5px 5px;
+	width: 900px;
+	
+}
+
+#wrapper {
+	height : auto !important; /* ignored by IE, applied everywhere else */
+	height : 100%; /* IE treats as min-height */
+	min-height : 100%; /* IE ignores this */
+}
+
+#container {
+	text-align: center;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.widget-area li,
+.widget li {
+	list-style-type: none;
+}
+
+.widget-area ul,
+.widget ul {
+	padding: 0 0;
+}
+
+/* =Util
+-------------------------------------------------------------- */
+.two-column-wrapper {
+	width: 100%;
+}
+
+.two-column-column1 {
+	width: 50%;
+	float: left;
+}
+
+.two-column-column2 {
+	width: 50%;
+	float: right;
+}
+
+/* =Sidebars
+-------------------------------------------------------------- */
+#sidebars .sidebar {
+	position: fixed;
+	width: 15%;
+}
+
+#sidebars #left-sidebar {
+	padding-left: 5px;
+	left: 0px;
+	text-align: left;
+}
+
+#sidebars #right-sidebar {
+	padding-right: 5px;
+	right: 0px;
+	text-align: right;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+#header #masthead {
+	text-align: center;
+}
+
+#header #top-widget-container {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#header #masthead #branding {
+	background-color:rgba(255, 255, 255, 0.8);
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+#footer {
+	clear: both;
+}
+
+#footer #site-info {
+	padding-top: 42px;
+	display: table;
+	width: 100%;
+}
+
+#footer #info-us {
+	width: 50%;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	
+	padding-right: 42px;
+}
+
+#footer #info-data {
+	width: 50%;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	
+	border-left: 1px solid #666;
+	padding-left: 42px;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+.entry-meta {
+	font-style: italic;
+}
+
+.entry-title {
+	text-align: center;
+}
+
+.entry-content {
+	padding-bottom: 42px;
+	text-align: left;
+}
+
+.entry-utility {
+	
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+
+#comments {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#comments #textComments {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	overflow: auto;
+}
+
+#comments #textComments h3 {
+	text-align: left;
+}
+
+#comments #pingComments {
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+#comments #pingComments h3 {
+	text-align: right;
+}
+
+.comment {
+	list-style-type: none;
+	margin-bottom: 3px;
+}
+
+#respond {
+	margin: 0 auto;
+	width: 75%;
+	clear: both;
+}
+
+/* =Archive
+-------------------------------------------------------------- */
+
+.archive .post {
+	margin-bottom: 42px;
+}
+
+/* =Widget
+-------------------------------------------------------------- */
+.widget ul li {
+	font-size: 1.17em;
+	margin: 1em 0px;
+}

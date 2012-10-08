@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<project basedir='.' default='all' name='emonicinformator'>
+	<property name='src' value='src' />
+	<property name='build' value='bin' />
+	
+	<target depends='emonicinformator-20'  name='all' />
+	
+	<target name='emonicinformator-10'>
+		<property name='nant.settings.currentframework' value='mono-1.0'/>
+		<csc debug='true' optimize='true'
+			output='${build}/emonicinformator.exe' target='exe'
+			warninglevel='4'>
+			<sources>
+				<include name='${src}/emonicinformator.cs' />
+			</sources>
+		</csc>
+	</target>
+	
+	<target name='emonicinformator-20' depends='emonicinformator-10'>
+		   <property name='nant.settings.currentframework' value='mono-2.0'/>
+			<csc debug='true' optimize='true'
+				output='${build}/emonicinformator-2.0.exe' target='exe'
+				warninglevel='4'>
+				<sources>
+					<include name='${src}/emonicinformator.cs' />
+				</sources>
+			</csc>
+	</target>
+</project>

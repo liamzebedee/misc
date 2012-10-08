@@ -1,0 +1,1808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://debugfrontend.emonic.org/" name="Emonic.Debugfrontend" targetNamespace="http://debugfrontend.emonic.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://debugfrontend.emonic.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="StartMdb">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="cmdLine" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StartMdbResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="RunApp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="workDir" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RunAppResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="GetNextEvent">
+        <xs:complexType/>
+      </xs:element>
+      <xs:complexType name="eventData">
+        <xs:complexContent mixed="false">
+          <xs:extension base="s0:ValueType">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="1" name="eventType" type="xs:string"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="arg1" type="xs:int"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="arg2" type="xs:int"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="arg3" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ValueType"/>
+      <xs:complexType name="backtraceData">
+        <xs:complexContent mixed="false">
+          <xs:extension base="s0:ValueType">
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="frameNumber" type="xs:int"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="currentFrame" type="xs:boolean"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="method" type="xs:string"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="file" type="xs:string"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="lineNumber" type="xs:int"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="moreData" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="printData">
+        <xs:complexContent mixed="false">
+          <xs:extension base="s0:ValueType">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="1" name="type" type="xs:string"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="varValue" type="xs:string"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="varNames" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="threadData">
+        <xs:complexContent mixed="false">
+          <xs:extension base="s0:ValueType">
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="processNumber" type="xs:int"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="PID" type="xs:int"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="processCmdLine" type="xs:string"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="threadNumber" type="xs:int"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="daemonThread" type="xs:boolean"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="threadState" type="xs:boolean"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="currentThread" type="xs:boolean"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="TID" type="xs:int"/>
+              <xs:element minOccurs="1" maxOccurs="1" name="moreData" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="GetNextEventResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="GetNextEventResult" type="s0:eventData"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Background">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="BackgroundResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Backtrace">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="execute" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BacktraceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="BacktraceResult" type="s0:backtraceData"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Break">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="file" type="xs:string"/>
+            <xs:element minOccurs="1" maxOccurs="1" name="lineNumber" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BreakResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="BreakResult" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Delete">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="breakpointNumber" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Disable">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="breakpointNumber" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisableResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Enable">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="breakpointNumber" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EnableResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Finish">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="FinishResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Frame">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="frameNumber" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FrameResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Next">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="NextResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Print">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="variableName" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PrintResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="PrintResult" type="s0:printData"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PtypeFieldsOnly">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="className" type="xs:string"/>
+            <xs:element minOccurs="1" maxOccurs="1" name="staticOnly" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PtypeFieldsOnlyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="PtypeFieldsOnlyResult" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Quit">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="QuitResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="SetVariable">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="variable" type="xs:string"/>
+            <xs:element minOccurs="0" maxOccurs="1" name="value" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetVariableResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="GetThreads">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="execute" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetThreadsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="GetThreadsResult" type="s0:threadData"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLocals">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="GetLocalsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetLocalsResult" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetParameters">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="GetParametersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetParametersResult" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Step">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="StepResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Stop">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="StopResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="Thread">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="threadNumber" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ThreadResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="eventData" type="s0:eventData"/>
+      <xs:element name="backtraceData" type="s0:backtraceData"/>
+      <xs:element name="int" type="xs:int"/>
+      <xs:element name="printData" type="s0:printData"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="threadData" type="s0:threadData"/>
+    </xs:schema>
+  </types>
+  <message name="StartMdbSoapIn">
+    <part name="parameters" element="s0:StartMdb"/>
+  </message>
+  <message name="StartMdbSoapOut">
+    <part name="parameters" element="s0:StartMdbResponse"/>
+  </message>
+  <message name="RunAppSoapIn">
+    <part name="parameters" element="s0:RunApp"/>
+  </message>
+  <message name="RunAppSoapOut">
+    <part name="parameters" element="s0:RunAppResponse"/>
+  </message>
+  <message name="GetNextEventSoapIn">
+    <part name="parameters" element="s0:GetNextEvent"/>
+  </message>
+  <message name="GetNextEventSoapOut">
+    <part name="parameters" element="s0:GetNextEventResponse"/>
+  </message>
+  <message name="BackgroundSoapIn">
+    <part name="parameters" element="s0:Background"/>
+  </message>
+  <message name="BackgroundSoapOut">
+    <part name="parameters" element="s0:BackgroundResponse"/>
+  </message>
+  <message name="BacktraceSoapIn">
+    <part name="parameters" element="s0:Backtrace"/>
+  </message>
+  <message name="BacktraceSoapOut">
+    <part name="parameters" element="s0:BacktraceResponse"/>
+  </message>
+  <message name="BreakSoapIn">
+    <part name="parameters" element="s0:Break"/>
+  </message>
+  <message name="BreakSoapOut">
+    <part name="parameters" element="s0:BreakResponse"/>
+  </message>
+  <message name="DeleteSoapIn">
+    <part name="parameters" element="s0:Delete"/>
+  </message>
+  <message name="DeleteSoapOut">
+    <part name="parameters" element="s0:DeleteResponse"/>
+  </message>
+  <message name="DisableSoapIn">
+    <part name="parameters" element="s0:Disable"/>
+  </message>
+  <message name="DisableSoapOut">
+    <part name="parameters" element="s0:DisableResponse"/>
+  </message>
+  <message name="EnableSoapIn">
+    <part name="parameters" element="s0:Enable"/>
+  </message>
+  <message name="EnableSoapOut">
+    <part name="parameters" element="s0:EnableResponse"/>
+  </message>
+  <message name="FinishSoapIn">
+    <part name="parameters" element="s0:Finish"/>
+  </message>
+  <message name="FinishSoapOut">
+    <part name="parameters" element="s0:FinishResponse"/>
+  </message>
+  <message name="FrameSoapIn">
+    <part name="parameters" element="s0:Frame"/>
+  </message>
+  <message name="FrameSoapOut">
+    <part name="parameters" element="s0:FrameResponse"/>
+  </message>
+  <message name="NextSoapIn">
+    <part name="parameters" element="s0:Next"/>
+  </message>
+  <message name="NextSoapOut">
+    <part name="parameters" element="s0:NextResponse"/>
+  </message>
+  <message name="PrintSoapIn">
+    <part name="parameters" element="s0:Print"/>
+  </message>
+  <message name="PrintSoapOut">
+    <part name="parameters" element="s0:PrintResponse"/>
+  </message>
+  <message name="PtypeFieldsOnlySoapIn">
+    <part name="parameters" element="s0:PtypeFieldsOnly"/>
+  </message>
+  <message name="PtypeFieldsOnlySoapOut">
+    <part name="parameters" element="s0:PtypeFieldsOnlyResponse"/>
+  </message>
+  <message name="QuitSoapIn">
+    <part name="parameters" element="s0:Quit"/>
+  </message>
+  <message name="QuitSoapOut">
+    <part name="parameters" element="s0:QuitResponse"/>
+  </message>
+  <message name="SetVariableSoapIn">
+    <part name="parameters" element="s0:SetVariable"/>
+  </message>
+  <message name="SetVariableSoapOut">
+    <part name="parameters" element="s0:SetVariableResponse"/>
+  </message>
+  <message name="GetThreadsSoapIn">
+    <part name="parameters" element="s0:GetThreads"/>
+  </message>
+  <message name="GetThreadsSoapOut">
+    <part name="parameters" element="s0:GetThreadsResponse"/>
+  </message>
+  <message name="GetLocalsSoapIn">
+    <part name="parameters" element="s0:GetLocals"/>
+  </message>
+  <message name="GetLocalsSoapOut">
+    <part name="parameters" element="s0:GetLocalsResponse"/>
+  </message>
+  <message name="GetParametersSoapIn">
+    <part name="parameters" element="s0:GetParameters"/>
+  </message>
+  <message name="GetParametersSoapOut">
+    <part name="parameters" element="s0:GetParametersResponse"/>
+  </message>
+  <message name="StepSoapIn">
+    <part name="parameters" element="s0:Step"/>
+  </message>
+  <message name="StepSoapOut">
+    <part name="parameters" element="s0:StepResponse"/>
+  </message>
+  <message name="StopSoapIn">
+    <part name="parameters" element="s0:Stop"/>
+  </message>
+  <message name="StopSoapOut">
+    <part name="parameters" element="s0:StopResponse"/>
+  </message>
+  <message name="ThreadSoapIn">
+    <part name="parameters" element="s0:Thread"/>
+  </message>
+  <message name="ThreadSoapOut">
+    <part name="parameters" element="s0:ThreadResponse"/>
+  </message>
+  <message name="StartMdbHttpGetIn">
+    <part name="cmdLine" type="s:string"/>
+  </message>
+  <message name="StartMdbHttpGetOut"/>
+  <message name="RunAppHttpGetIn">
+    <part name="workDir" type="s:string"/>
+  </message>
+  <message name="RunAppHttpGetOut"/>
+  <message name="GetNextEventHttpGetIn"/>
+  <message name="GetNextEventHttpGetOut">
+    <part name="Body" element="s0:eventData"/>
+  </message>
+  <message name="BackgroundHttpGetIn"/>
+  <message name="BackgroundHttpGetOut"/>
+  <message name="BacktraceHttpGetIn">
+    <part name="execute" type="s:boolean"/>
+  </message>
+  <message name="BacktraceHttpGetOut">
+    <part name="Body" element="s0:backtraceData"/>
+  </message>
+  <message name="BreakHttpGetIn">
+    <part name="file" type="s:string"/>
+    <part name="lineNumber" type="s:int"/>
+  </message>
+  <message name="BreakHttpGetOut">
+    <part name="Body" element="s0:int"/>
+  </message>
+  <message name="DeleteHttpGetIn">
+    <part name="breakpointNumber" type="s:int"/>
+  </message>
+  <message name="DeleteHttpGetOut"/>
+  <message name="DisableHttpGetIn">
+    <part name="breakpointNumber" type="s:int"/>
+  </message>
+  <message name="DisableHttpGetOut"/>
+  <message name="EnableHttpGetIn">
+    <part name="breakpointNumber" type="s:int"/>
+  </message>
+  <message name="EnableHttpGetOut"/>
+  <message name="FinishHttpGetIn"/>
+  <message name="FinishHttpGetOut"/>
+  <message name="FrameHttpGetIn">
+    <part name="frameNumber" type="s:int"/>
+  </message>
+  <message name="FrameHttpGetOut"/>
+  <message name="NextHttpGetIn"/>
+  <message name="NextHttpGetOut"/>
+  <message name="PrintHttpGetIn">
+    <part name="variableName" type="s:string"/>
+  </message>
+  <message name="PrintHttpGetOut">
+    <part name="Body" element="s0:printData"/>
+  </message>
+  <message name="PtypeFieldsOnlyHttpGetIn">
+    <part name="className" type="s:string"/>
+    <part name="staticOnly" type="s:boolean"/>
+  </message>
+  <message name="PtypeFieldsOnlyHttpGetOut">
+    <part name="Body" element="s0:string"/>
+  </message>
+  <message name="QuitHttpGetIn"/>
+  <message name="QuitHttpGetOut"/>
+  <message name="SetVariableHttpGetIn">
+    <part name="variable" type="s:string"/>
+    <part name="value" type="s:string"/>
+  </message>
+  <message name="SetVariableHttpGetOut"/>
+  <message name="GetThreadsHttpGetIn">
+    <part name="execute" type="s:boolean"/>
+  </message>
+  <message name="GetThreadsHttpGetOut">
+    <part name="Body" element="s0:threadData"/>
+  </message>
+  <message name="GetLocalsHttpGetIn"/>
+  <message name="GetLocalsHttpGetOut">
+    <part name="Body" element="s0:string"/>
+  </message>
+  <message name="GetParametersHttpGetIn"/>
+  <message name="GetParametersHttpGetOut">
+    <part name="Body" element="s0:string"/>
+  </message>
+  <message name="StepHttpGetIn"/>
+  <message name="StepHttpGetOut"/>
+  <message name="StopHttpGetIn"/>
+  <message name="StopHttpGetOut"/>
+  <message name="ThreadHttpGetIn">
+    <part name="threadNumber" type="s:int"/>
+  </message>
+  <message name="ThreadHttpGetOut"/>
+  <message name="StartMdbHttpPostIn">
+    <part name="cmdLine" type="s:string"/>
+  </message>
+  <message name="StartMdbHttpPostOut"/>
+  <message name="RunAppHttpPostIn">
+    <part name="workDir" type="s:string"/>
+  </message>
+  <message name="RunAppHttpPostOut"/>
+  <message name="GetNextEventHttpPostIn"/>
+  <message name="GetNextEventHttpPostOut">
+    <part name="Body" element="s0:eventData"/>
+  </message>
+  <message name="BackgroundHttpPostIn"/>
+  <message name="BackgroundHttpPostOut"/>
+  <message name="BacktraceHttpPostIn">
+    <part name="execute" type="s:boolean"/>
+  </message>
+  <message name="BacktraceHttpPostOut">
+    <part name="Body" element="s0:backtraceData"/>
+  </message>
+  <message name="BreakHttpPostIn">
+    <part name="file" type="s:string"/>
+    <part name="lineNumber" type="s:int"/>
+  </message>
+  <message name="BreakHttpPostOut">
+    <part name="Body" element="s0:int"/>
+  </message>
+  <message name="DeleteHttpPostIn">
+    <part name="breakpointNumber" type="s:int"/>
+  </message>
+  <message name="DeleteHttpPostOut"/>
+  <message name="DisableHttpPostIn">
+    <part name="breakpointNumber" type="s:int"/>
+  </message>
+  <message name="DisableHttpPostOut"/>
+  <message name="EnableHttpPostIn">
+    <part name="breakpointNumber" type="s:int"/>
+  </message>
+  <message name="EnableHttpPostOut"/>
+  <message name="FinishHttpPostIn"/>
+  <message name="FinishHttpPostOut"/>
+  <message name="FrameHttpPostIn">
+    <part name="frameNumber" type="s:int"/>
+  </message>
+  <message name="FrameHttpPostOut"/>
+  <message name="NextHttpPostIn"/>
+  <message name="NextHttpPostOut"/>
+  <message name="PrintHttpPostIn">
+    <part name="variableName" type="s:string"/>
+  </message>
+  <message name="PrintHttpPostOut">
+    <part name="Body" element="s0:printData"/>
+  </message>
+  <message name="PtypeFieldsOnlyHttpPostIn">
+    <part name="className" type="s:string"/>
+    <part name="staticOnly" type="s:boolean"/>
+  </message>
+  <message name="PtypeFieldsOnlyHttpPostOut">
+    <part name="Body" element="s0:string"/>
+  </message>
+  <message name="QuitHttpPostIn"/>
+  <message name="QuitHttpPostOut"/>
+  <message name="SetVariableHttpPostIn">
+    <part name="variable" type="s:string"/>
+    <part name="value" type="s:string"/>
+  </message>
+  <message name="SetVariableHttpPostOut"/>
+  <message name="GetThreadsHttpPostIn">
+    <part name="execute" type="s:boolean"/>
+  </message>
+  <message name="GetThreadsHttpPostOut">
+    <part name="Body" element="s0:threadData"/>
+  </message>
+  <message name="GetLocalsHttpPostIn"/>
+  <message name="GetLocalsHttpPostOut">
+    <part name="Body" element="s0:string"/>
+  </message>
+  <message name="GetParametersHttpPostIn"/>
+  <message name="GetParametersHttpPostOut">
+    <part name="Body" element="s0:string"/>
+  </message>
+  <message name="StepHttpPostIn"/>
+  <message name="StepHttpPostOut"/>
+  <message name="StopHttpPostIn"/>
+  <message name="StopHttpPostOut"/>
+  <message name="ThreadHttpPostIn">
+    <part name="threadNumber" type="s:int"/>
+  </message>
+  <message name="ThreadHttpPostOut"/>
+  <portType name="Emonic.DebugfrontendSoap">
+    <operation name="StartMdb">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Start MDB</wsdl:documentation>
+      <input message="s0:StartMdbSoapIn"/>
+      <output message="s0:StartMdbSoapOut"/>
+    </operation>
+    <operation name="RunApp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Run application in MDB (not halting in Main)</wsdl:documentation>
+      <input message="s0:RunAppSoapIn"/>
+      <output message="s0:RunAppSoapOut"/>
+    </operation>
+    <operation name="GetNextEvent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get next Event</wsdl:documentation>
+      <input message="s0:GetNextEventSoapIn"/>
+      <output message="s0:GetNextEventSoapOut"/>
+    </operation>
+    <operation name="Background">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB background command</wsdl:documentation>
+      <input message="s0:BackgroundSoapIn"/>
+      <output message="s0:BackgroundSoapOut"/>
+    </operation>
+    <operation name="Backtrace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB backtrace command</wsdl:documentation>
+      <input message="s0:BacktraceSoapIn"/>
+      <output message="s0:BacktraceSoapOut"/>
+    </operation>
+    <operation name="Break">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB break command</wsdl:documentation>
+      <input message="s0:BreakSoapIn"/>
+      <output message="s0:BreakSoapOut"/>
+    </operation>
+    <operation name="Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB delete command</wsdl:documentation>
+      <input message="s0:DeleteSoapIn"/>
+      <output message="s0:DeleteSoapOut"/>
+    </operation>
+    <operation name="Disable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB disable command</wsdl:documentation>
+      <input message="s0:DisableSoapIn"/>
+      <output message="s0:DisableSoapOut"/>
+    </operation>
+    <operation name="Enable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB enable command</wsdl:documentation>
+      <input message="s0:EnableSoapIn"/>
+      <output message="s0:EnableSoapOut"/>
+    </operation>
+    <operation name="Finish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB finish command</wsdl:documentation>
+      <input message="s0:FinishSoapIn"/>
+      <output message="s0:FinishSoapOut"/>
+    </operation>
+    <operation name="Frame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB frame command</wsdl:documentation>
+      <input message="s0:FrameSoapIn"/>
+      <output message="s0:FrameSoapOut"/>
+    </operation>
+    <operation name="Next">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB next command</wsdl:documentation>
+      <input message="s0:NextSoapIn"/>
+      <output message="s0:NextSoapOut"/>
+    </operation>
+    <operation name="Print">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB print command</wsdl:documentation>
+      <input message="s0:PrintSoapIn"/>
+      <output message="s0:PrintSoapOut"/>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB ptype command - fields only</wsdl:documentation>
+      <input message="s0:PtypeFieldsOnlySoapIn"/>
+      <output message="s0:PtypeFieldsOnlySoapOut"/>
+    </operation>
+    <operation name="Quit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB quit command</wsdl:documentation>
+      <input message="s0:QuitSoapIn"/>
+      <output message="s0:QuitSoapOut"/>
+    </operation>
+    <operation name="SetVariable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB set X = Y command</wsdl:documentation>
+      <input message="s0:SetVariableSoapIn"/>
+      <output message="s0:SetVariableSoapOut"/>
+    </operation>
+    <operation name="GetThreads">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show threads command</wsdl:documentation>
+      <input message="s0:GetThreadsSoapIn"/>
+      <output message="s0:GetThreadsSoapOut"/>
+    </operation>
+    <operation name="GetLocals">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show locals command</wsdl:documentation>
+      <input message="s0:GetLocalsSoapIn"/>
+      <output message="s0:GetLocalsSoapOut"/>
+    </operation>
+    <operation name="GetParameters">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show parameters command</wsdl:documentation>
+      <input message="s0:GetParametersSoapIn"/>
+      <output message="s0:GetParametersSoapOut"/>
+    </operation>
+    <operation name="Step">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB step command</wsdl:documentation>
+      <input message="s0:StepSoapIn"/>
+      <output message="s0:StepSoapOut"/>
+    </operation>
+    <operation name="Stop">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB stop command</wsdl:documentation>
+      <input message="s0:StopSoapIn"/>
+      <output message="s0:StopSoapOut"/>
+    </operation>
+    <operation name="Thread">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB thread command</wsdl:documentation>
+      <input message="s0:ThreadSoapIn"/>
+      <output message="s0:ThreadSoapOut"/>
+    </operation>
+  </portType>
+  <portType name="Emonic.DebugfrontendSoap12">
+    <operation name="StartMdb">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Start MDB</wsdl:documentation>
+      <input message="s0:StartMdbSoapIn"/>
+      <output message="s0:StartMdbSoapOut"/>
+    </operation>
+    <operation name="RunApp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Run application in MDB (not halting in Main)</wsdl:documentation>
+      <input message="s0:RunAppSoapIn"/>
+      <output message="s0:RunAppSoapOut"/>
+    </operation>
+    <operation name="GetNextEvent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get next Event</wsdl:documentation>
+      <input message="s0:GetNextEventSoapIn"/>
+      <output message="s0:GetNextEventSoapOut"/>
+    </operation>
+    <operation name="Background">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB background command</wsdl:documentation>
+      <input message="s0:BackgroundSoapIn"/>
+      <output message="s0:BackgroundSoapOut"/>
+    </operation>
+    <operation name="Backtrace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB backtrace command</wsdl:documentation>
+      <input message="s0:BacktraceSoapIn"/>
+      <output message="s0:BacktraceSoapOut"/>
+    </operation>
+    <operation name="Break">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB break command</wsdl:documentation>
+      <input message="s0:BreakSoapIn"/>
+      <output message="s0:BreakSoapOut"/>
+    </operation>
+    <operation name="Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB delete command</wsdl:documentation>
+      <input message="s0:DeleteSoapIn"/>
+      <output message="s0:DeleteSoapOut"/>
+    </operation>
+    <operation name="Disable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB disable command</wsdl:documentation>
+      <input message="s0:DisableSoapIn"/>
+      <output message="s0:DisableSoapOut"/>
+    </operation>
+    <operation name="Enable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB enable command</wsdl:documentation>
+      <input message="s0:EnableSoapIn"/>
+      <output message="s0:EnableSoapOut"/>
+    </operation>
+    <operation name="Finish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB finish command</wsdl:documentation>
+      <input message="s0:FinishSoapIn"/>
+      <output message="s0:FinishSoapOut"/>
+    </operation>
+    <operation name="Frame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB frame command</wsdl:documentation>
+      <input message="s0:FrameSoapIn"/>
+      <output message="s0:FrameSoapOut"/>
+    </operation>
+    <operation name="Next">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB next command</wsdl:documentation>
+      <input message="s0:NextSoapIn"/>
+      <output message="s0:NextSoapOut"/>
+    </operation>
+    <operation name="Print">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB print command</wsdl:documentation>
+      <input message="s0:PrintSoapIn"/>
+      <output message="s0:PrintSoapOut"/>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB ptype command - fields only</wsdl:documentation>
+      <input message="s0:PtypeFieldsOnlySoapIn"/>
+      <output message="s0:PtypeFieldsOnlySoapOut"/>
+    </operation>
+    <operation name="Quit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB quit command</wsdl:documentation>
+      <input message="s0:QuitSoapIn"/>
+      <output message="s0:QuitSoapOut"/>
+    </operation>
+    <operation name="SetVariable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB set X = Y command</wsdl:documentation>
+      <input message="s0:SetVariableSoapIn"/>
+      <output message="s0:SetVariableSoapOut"/>
+    </operation>
+    <operation name="GetThreads">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show threads command</wsdl:documentation>
+      <input message="s0:GetThreadsSoapIn"/>
+      <output message="s0:GetThreadsSoapOut"/>
+    </operation>
+    <operation name="GetLocals">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show locals command</wsdl:documentation>
+      <input message="s0:GetLocalsSoapIn"/>
+      <output message="s0:GetLocalsSoapOut"/>
+    </operation>
+    <operation name="GetParameters">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show parameters command</wsdl:documentation>
+      <input message="s0:GetParametersSoapIn"/>
+      <output message="s0:GetParametersSoapOut"/>
+    </operation>
+    <operation name="Step">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB step command</wsdl:documentation>
+      <input message="s0:StepSoapIn"/>
+      <output message="s0:StepSoapOut"/>
+    </operation>
+    <operation name="Stop">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB stop command</wsdl:documentation>
+      <input message="s0:StopSoapIn"/>
+      <output message="s0:StopSoapOut"/>
+    </operation>
+    <operation name="Thread">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB thread command</wsdl:documentation>
+      <input message="s0:ThreadSoapIn"/>
+      <output message="s0:ThreadSoapOut"/>
+    </operation>
+  </portType>
+  <portType name="Emonic.DebugfrontendHttpGet">
+    <operation name="StartMdb">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Start MDB</wsdl:documentation>
+      <input message="s0:StartMdbHttpGetIn"/>
+      <output message="s0:StartMdbHttpGetOut"/>
+    </operation>
+    <operation name="RunApp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Run application in MDB (not halting in Main)</wsdl:documentation>
+      <input message="s0:RunAppHttpGetIn"/>
+      <output message="s0:RunAppHttpGetOut"/>
+    </operation>
+    <operation name="GetNextEvent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get next Event</wsdl:documentation>
+      <input message="s0:GetNextEventHttpGetIn"/>
+      <output message="s0:GetNextEventHttpGetOut"/>
+    </operation>
+    <operation name="Background">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB background command</wsdl:documentation>
+      <input message="s0:BackgroundHttpGetIn"/>
+      <output message="s0:BackgroundHttpGetOut"/>
+    </operation>
+    <operation name="Backtrace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB backtrace command</wsdl:documentation>
+      <input message="s0:BacktraceHttpGetIn"/>
+      <output message="s0:BacktraceHttpGetOut"/>
+    </operation>
+    <operation name="Break">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB break command</wsdl:documentation>
+      <input message="s0:BreakHttpGetIn"/>
+      <output message="s0:BreakHttpGetOut"/>
+    </operation>
+    <operation name="Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB delete command</wsdl:documentation>
+      <input message="s0:DeleteHttpGetIn"/>
+      <output message="s0:DeleteHttpGetOut"/>
+    </operation>
+    <operation name="Disable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB disable command</wsdl:documentation>
+      <input message="s0:DisableHttpGetIn"/>
+      <output message="s0:DisableHttpGetOut"/>
+    </operation>
+    <operation name="Enable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB enable command</wsdl:documentation>
+      <input message="s0:EnableHttpGetIn"/>
+      <output message="s0:EnableHttpGetOut"/>
+    </operation>
+    <operation name="Finish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB finish command</wsdl:documentation>
+      <input message="s0:FinishHttpGetIn"/>
+      <output message="s0:FinishHttpGetOut"/>
+    </operation>
+    <operation name="Frame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB frame command</wsdl:documentation>
+      <input message="s0:FrameHttpGetIn"/>
+      <output message="s0:FrameHttpGetOut"/>
+    </operation>
+    <operation name="Next">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB next command</wsdl:documentation>
+      <input message="s0:NextHttpGetIn"/>
+      <output message="s0:NextHttpGetOut"/>
+    </operation>
+    <operation name="Print">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB print command</wsdl:documentation>
+      <input message="s0:PrintHttpGetIn"/>
+      <output message="s0:PrintHttpGetOut"/>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB ptype command - fields only</wsdl:documentation>
+      <input message="s0:PtypeFieldsOnlyHttpGetIn"/>
+      <output message="s0:PtypeFieldsOnlyHttpGetOut"/>
+    </operation>
+    <operation name="Quit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB quit command</wsdl:documentation>
+      <input message="s0:QuitHttpGetIn"/>
+      <output message="s0:QuitHttpGetOut"/>
+    </operation>
+    <operation name="SetVariable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB set X = Y command</wsdl:documentation>
+      <input message="s0:SetVariableHttpGetIn"/>
+      <output message="s0:SetVariableHttpGetOut"/>
+    </operation>
+    <operation name="GetThreads">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show threads command</wsdl:documentation>
+      <input message="s0:GetThreadsHttpGetIn"/>
+      <output message="s0:GetThreadsHttpGetOut"/>
+    </operation>
+    <operation name="GetLocals">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show locals command</wsdl:documentation>
+      <input message="s0:GetLocalsHttpGetIn"/>
+      <output message="s0:GetLocalsHttpGetOut"/>
+    </operation>
+    <operation name="GetParameters">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show parameters command</wsdl:documentation>
+      <input message="s0:GetParametersHttpGetIn"/>
+      <output message="s0:GetParametersHttpGetOut"/>
+    </operation>
+    <operation name="Step">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB step command</wsdl:documentation>
+      <input message="s0:StepHttpGetIn"/>
+      <output message="s0:StepHttpGetOut"/>
+    </operation>
+    <operation name="Stop">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB stop command</wsdl:documentation>
+      <input message="s0:StopHttpGetIn"/>
+      <output message="s0:StopHttpGetOut"/>
+    </operation>
+    <operation name="Thread">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB thread command</wsdl:documentation>
+      <input message="s0:ThreadHttpGetIn"/>
+      <output message="s0:ThreadHttpGetOut"/>
+    </operation>
+  </portType>
+  <portType name="Emonic.DebugfrontendHttpPost">
+    <operation name="StartMdb">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Start MDB</wsdl:documentation>
+      <input message="s0:StartMdbHttpPostIn"/>
+      <output message="s0:StartMdbHttpPostOut"/>
+    </operation>
+    <operation name="RunApp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Run application in MDB (not halting in Main)</wsdl:documentation>
+      <input message="s0:RunAppHttpPostIn"/>
+      <output message="s0:RunAppHttpPostOut"/>
+    </operation>
+    <operation name="GetNextEvent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get next Event</wsdl:documentation>
+      <input message="s0:GetNextEventHttpPostIn"/>
+      <output message="s0:GetNextEventHttpPostOut"/>
+    </operation>
+    <operation name="Background">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB background command</wsdl:documentation>
+      <input message="s0:BackgroundHttpPostIn"/>
+      <output message="s0:BackgroundHttpPostOut"/>
+    </operation>
+    <operation name="Backtrace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB backtrace command</wsdl:documentation>
+      <input message="s0:BacktraceHttpPostIn"/>
+      <output message="s0:BacktraceHttpPostOut"/>
+    </operation>
+    <operation name="Break">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB break command</wsdl:documentation>
+      <input message="s0:BreakHttpPostIn"/>
+      <output message="s0:BreakHttpPostOut"/>
+    </operation>
+    <operation name="Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB delete command</wsdl:documentation>
+      <input message="s0:DeleteHttpPostIn"/>
+      <output message="s0:DeleteHttpPostOut"/>
+    </operation>
+    <operation name="Disable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB disable command</wsdl:documentation>
+      <input message="s0:DisableHttpPostIn"/>
+      <output message="s0:DisableHttpPostOut"/>
+    </operation>
+    <operation name="Enable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB enable command</wsdl:documentation>
+      <input message="s0:EnableHttpPostIn"/>
+      <output message="s0:EnableHttpPostOut"/>
+    </operation>
+    <operation name="Finish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB finish command</wsdl:documentation>
+      <input message="s0:FinishHttpPostIn"/>
+      <output message="s0:FinishHttpPostOut"/>
+    </operation>
+    <operation name="Frame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB frame command</wsdl:documentation>
+      <input message="s0:FrameHttpPostIn"/>
+      <output message="s0:FrameHttpPostOut"/>
+    </operation>
+    <operation name="Next">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB next command</wsdl:documentation>
+      <input message="s0:NextHttpPostIn"/>
+      <output message="s0:NextHttpPostOut"/>
+    </operation>
+    <operation name="Print">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB print command</wsdl:documentation>
+      <input message="s0:PrintHttpPostIn"/>
+      <output message="s0:PrintHttpPostOut"/>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB ptype command - fields only</wsdl:documentation>
+      <input message="s0:PtypeFieldsOnlyHttpPostIn"/>
+      <output message="s0:PtypeFieldsOnlyHttpPostOut"/>
+    </operation>
+    <operation name="Quit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB quit command</wsdl:documentation>
+      <input message="s0:QuitHttpPostIn"/>
+      <output message="s0:QuitHttpPostOut"/>
+    </operation>
+    <operation name="SetVariable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB set X = Y command</wsdl:documentation>
+      <input message="s0:SetVariableHttpPostIn"/>
+      <output message="s0:SetVariableHttpPostOut"/>
+    </operation>
+    <operation name="GetThreads">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show threads command</wsdl:documentation>
+      <input message="s0:GetThreadsHttpPostIn"/>
+      <output message="s0:GetThreadsHttpPostOut"/>
+    </operation>
+    <operation name="GetLocals">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show locals command</wsdl:documentation>
+      <input message="s0:GetLocalsHttpPostIn"/>
+      <output message="s0:GetLocalsHttpPostOut"/>
+    </operation>
+    <operation name="GetParameters">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB show parameters command</wsdl:documentation>
+      <input message="s0:GetParametersHttpPostIn"/>
+      <output message="s0:GetParametersHttpPostOut"/>
+    </operation>
+    <operation name="Step">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB step command</wsdl:documentation>
+      <input message="s0:StepHttpPostIn"/>
+      <output message="s0:StepHttpPostOut"/>
+    </operation>
+    <operation name="Stop">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB stop command</wsdl:documentation>
+      <input message="s0:StopHttpPostIn"/>
+      <output message="s0:StopHttpPostOut"/>
+    </operation>
+    <operation name="Thread">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MDB thread command</wsdl:documentation>
+      <input message="s0:ThreadHttpPostIn"/>
+      <output message="s0:ThreadHttpPostOut"/>
+    </operation>
+  </portType>
+  <binding name="Emonic.DebugfrontendSoap" type="s0:Emonic.DebugfrontendSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="StartMdb">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/StartMdb" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="RunApp">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/RunApp" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetNextEvent">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/GetNextEvent" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Background">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Background" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Backtrace">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Backtrace" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Break">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Break" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Delete">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Delete" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Disable">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Disable" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Enable">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Enable" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Finish">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Finish" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Frame">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Frame" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Next">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Next" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Print">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Print" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/PtypeFieldsOnly" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Quit">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Quit" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="SetVariable">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/SetVariable" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetThreads">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/GetThreads" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetLocals">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/GetLocals" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetParameters">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/GetParameters" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Step">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Step" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Stop">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Stop" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Thread">
+      <soap:operation soapAction="http://debugfrontend.emonic.org/Thread" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="Emonic.DebugfrontendSoap12" type="s0:Emonic.DebugfrontendSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="StartMdb">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/StartMdb" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="RunApp">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/RunApp" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetNextEvent">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/GetNextEvent" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Background">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Background" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Backtrace">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Backtrace" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Break">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Break" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Delete">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Delete" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Disable">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Disable" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Enable">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Enable" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Finish">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Finish" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Frame">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Frame" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Next">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Next" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Print">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Print" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/PtypeFieldsOnly" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Quit">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Quit" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="SetVariable">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/SetVariable" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetThreads">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/GetThreads" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetLocals">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/GetLocals" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetParameters">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/GetParameters" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Step">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Step" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Stop">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Stop" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Thread">
+      <soap12:operation soapAction="http://debugfrontend.emonic.org/Thread" style="document"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="Emonic.DebugfrontendHttpGet" type="s0:Emonic.DebugfrontendHttpGet">
+    <http:binding verb="GET"/>
+    <operation name="StartMdb">
+      <http:operation location="/StartMdb"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="RunApp">
+      <http:operation location="/RunApp"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="GetNextEvent">
+      <http:operation location="/GetNextEvent"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Background">
+      <http:operation location="/Background"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Backtrace">
+      <http:operation location="/Backtrace"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Break">
+      <http:operation location="/Break"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Delete">
+      <http:operation location="/Delete"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Disable">
+      <http:operation location="/Disable"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Enable">
+      <http:operation location="/Enable"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Finish">
+      <http:operation location="/Finish"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Frame">
+      <http:operation location="/Frame"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Next">
+      <http:operation location="/Next"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Print">
+      <http:operation location="/Print"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <http:operation location="/PtypeFieldsOnly"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Quit">
+      <http:operation location="/Quit"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="SetVariable">
+      <http:operation location="/SetVariable"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="GetThreads">
+      <http:operation location="/GetThreads"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="GetLocals">
+      <http:operation location="/GetLocals"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="GetParameters">
+      <http:operation location="/GetParameters"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Step">
+      <http:operation location="/Step"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Stop">
+      <http:operation location="/Stop"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Thread">
+      <http:operation location="/Thread"/>
+      <input>
+        <http:urlEncoded/>
+      </input>
+      <output/>
+    </operation>
+  </binding>
+  <binding name="Emonic.DebugfrontendHttpPost" type="s0:Emonic.DebugfrontendHttpPost">
+    <http:binding verb="POST"/>
+    <operation name="StartMdb">
+      <http:operation location="/StartMdb"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="RunApp">
+      <http:operation location="/RunApp"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="GetNextEvent">
+      <http:operation location="/GetNextEvent"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Background">
+      <http:operation location="/Background"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Backtrace">
+      <http:operation location="/Backtrace"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Break">
+      <http:operation location="/Break"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Delete">
+      <http:operation location="/Delete"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Disable">
+      <http:operation location="/Disable"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Enable">
+      <http:operation location="/Enable"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Finish">
+      <http:operation location="/Finish"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Frame">
+      <http:operation location="/Frame"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Next">
+      <http:operation location="/Next"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Print">
+      <http:operation location="/Print"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="PtypeFieldsOnly">
+      <http:operation location="/PtypeFieldsOnly"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Quit">
+      <http:operation location="/Quit"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="SetVariable">
+      <http:operation location="/SetVariable"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="GetThreads">
+      <http:operation location="/GetThreads"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="GetLocals">
+      <http:operation location="/GetLocals"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="GetParameters">
+      <http:operation location="/GetParameters"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"/>
+      </output>
+    </operation>
+    <operation name="Step">
+      <http:operation location="/Step"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Stop">
+      <http:operation location="/Stop"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+    <operation name="Thread">
+      <http:operation location="/Thread"/>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </input>
+      <output/>
+    </operation>
+  </binding>
+  <service name="Emonic.Debugfrontend">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">A web service that offers an alternative front-end to the Mono Debugger (v0.60).</wsdl:documentation>
+    <port name="Emonic.DebugfrontendSoap" binding="s0:Emonic.DebugfrontendSoap">
+      <soap:address location="http://localhost:8080/EmonicDebuggingService.asmx"/>
+    </port>
+    <port name="Emonic.DebugfrontendSoap12" binding="s0:Emonic.DebugfrontendSoap12">
+      <soap12:address location="http://localhost:8080/EmonicDebuggingService.asmx"/>
+    </port>
+    <port name="Emonic.DebugfrontendHttpGet" binding="s0:Emonic.DebugfrontendHttpGet">
+      <http:address location="http://localhost:8080/EmonicDebuggingService.asmx"/>
+    </port>
+    <port name="Emonic.DebugfrontendHttpPost" binding="s0:Emonic.DebugfrontendHttpPost">
+      <http:address location="http://localhost:8080/EmonicDebuggingService.asmx"/>
+    </port>
+  </service>
+</definitions>

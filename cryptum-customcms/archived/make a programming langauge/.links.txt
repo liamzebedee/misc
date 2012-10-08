@@ -1,0 +1,13 @@
+http://www.cs.man.ac.uk/~pjj/farrell/compmain.html
+http://www.cs.man.ac.uk/~pjj/farrell/comp1.html
+http://www.cs.man.ac.uk/~pjj/farrell/comp2.html
+http://www.cs.man.ac.uk/~pjj/farrell/comp3.html
+http://www.cs.man.ac.uk/~pjj/farrell/comp4.html
+http://www.cs.man.ac.uk/~pjj/farrell/comp5.html
+http://www.cs.man.ac.uk/~pjj/farrell/comp6.html
+http://www.cs.man.ac.uk/~pjj/farrell/comp7.html
+
+http://flipcode.com/archives/Implementing_A_Scripting_Engine-Part_1_Overview.shtml
+
+http://www.hokstad.com/compiler
+

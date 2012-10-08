@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Help wanted</title>
+</head>
+<body>
+
+<h1>Help wanted</h1>
+<p>
+You can help to improve this project in various ways. The time you have to invest is anywhere between a few minutes
+and a few years depending how deep you want to get involved with the project. Here are some ways you can help to improve Emonic:
+</p>
+
+<h1>Feature requests</h1>
+<p>
+Feel free to submit feature requests to the <a href="http://sourceforge.net/tracker/?group_id=158390&atid=807644">Emonic tracker</a>.
+Naturally, we don't guarantee that they will all be implemented, but it helps us determine what is important to the project.
+</p>
+
+<h1>Bug reports</h1>
+<p>
+Please do not be shy about reporting bugs to <a href="http://sourceforge.net/tracker/?group_id=158390&atid=807641">Emonic's bug tracking system</a>!
+This is the only venue that we will be informed about bugs in Emonic beyond our own testing. Unfortunately, you should not expect
+that the bugs are fixed in a quick manner as the development speed of Emonic is not as fast as we'd like.
+</p>
+
+<h1>Bug fixes and small feature implementations</h1>
+<p>
+If you have a (small) feature request or find a bug that you know how to implement or fix, feel free to work on it!
+This requires experience in Java, possibly C#, and Eclipse plug-in development. To do this, please:
+</p>
+<ul>
+<li>open a ticket in the <a href="http://sourceforge.net/tracker/?group_id=158390&atid=807644">feature request</a> or <a href="http://sourceforge.net/tracker/?group_id=158390&atid=807641">bug tracker</a>,
+describe the problem and mention that you want to solve this problem yourself.</li>
+<li>check out the newest Emonic source code via <a href="http://sourceforge.net/cvs/?group_id=158390">anonymous CVS</a></li>
+<li>implement the code</li>
+<li>test the code in the Eclipse runtime environment</li>
+<li>attach a patch to the ticket you opened (you need a SourceForge account for this step)</li>
+<li>we will integrate the code in the official release and add your name to the our <a href="contributors.html">Hall of Fame</a> for contributors</li>
+<li>if you do this more than twice I'll add you to the project developers so that you can merge the code directly into the release</li>
+</ul>
+
+<h1>Contribute a plug-in to Emonic</h1>
+<p>
+There are various themes Emonic addresses which are so large that they should be implemented as 
+extra plug-ins based on the Emonic architecture. We need people who feels ownership over these plug-ins and will take the time to implement them. 
+In our opinion, each feature will demand experience in Java, Eclipse, and C# as well as at least half a man-year of working time.
+So, think twice before volunteering to take responsibility for one of these features. Please contact Bernhard (bernhardbrem) via SourceForge's
+email mechanism or post a message on the <a href="http://sourceforge.net/forum/forum.php?forum_id=533588">'Developers' forum</a>
+if you are interested.
+  
+The following features are "open" and will probably not be implemented by us given our resource and time constraints:
+</p>
+<h2>Debugger support</h2>
+<p>
+Since there is an <a href="http://www.eclipse.org/articles/Article-Debugger/how-to.html">excellent tutorial</a>
+on the Eclipse homepage on debuggers for Eclipse, it may seem like this is quite easy to implement.
+The problem in this case is the control of the C#/.NET debugger. We see two possible ways to do this:
+</p>
+<ul>
+<li>Communicate with the command line debugger via std-io. Advantage: Should be possible with Mono and 
+Microsoft .NET. Problems: Not very elegant. Debugging output and std-out are presented at the same console. 
+From our experiments, some lines of the debugger output is not being captured when the debugger is launched from within Eclipse.</li>
+<li>Communication via a network. Advantage: Better control of the debugging messages, remote debugging possible. 
+Drawback: A .NET debugger frontend has to be written. Since the Mono debugger backands are still
+very much at a beta (if not alpha) level, this frontend might change from version to version.
+A lot of work is required to implement this.
+</ul> 
+<h2>Visual Basic .NET support</h2>
+<p>
+We don't feel that one needs to be an Eclipse guru for this as you can pretty much copy
+a lot of the C# code and adapt it for VB.NET (although we should see which classes can be used for both).
+The most difficult work is probably going to be proper syntax highlighting and a parser to create a syntax tree of the code.
+Even if it is not too difficult, writing the plug-in will take a lot of time.
+</p>
+<h2>NUnit support</h2> 
+<p>
+This would be really nice and should not be too hard to implement. We may have to change the Emonic base
+a little bit so that the tests are run after every build. However, the core functionality of NUnit
+should be separated out as another plug-in.
+</p>
+<h2>Surface builder</h2>
+<p>
+We don't know whether this is possible at all, with regards to the displaying of a .NET forms surface or a
+surface described in XAML via Eclipse and in a way so that it is portable to on all platforms that
+the .NET framework runs on and looks in the designer (Windows, Linux, Mac, etc.). Ideas and
+implementations are very welcome!
+</p>
+</body>
+</html>

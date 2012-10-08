@@ -1,0 +1,3 @@
+http://htmlpurifier.org/download
+http://www.google.com.au/search?q=remove`malicious+html+tags+from+comments&hl=en&safe=off&prmd=ivns&ei=IHo6TavVLciIrAeywZD6CA&start=20&sa=N
+http://www.thetruetribe.com/2009/07/stripping-out-html-tags-in-jquery/

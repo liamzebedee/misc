@@ -1,0 +1,21 @@
+#forma
+{
+background: grey;
+padding-bottom:1.5px;
+color:white;
+}
+
+#messageData
+{
+display:block;
+
+}
+
+.message
+{
+background: grey;
+color:white;
+padding-left:10px;
+//padding-top:5px;
+padding-bottom:1.5px;
+}

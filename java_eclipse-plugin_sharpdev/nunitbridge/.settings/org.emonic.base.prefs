@@ -1,0 +1,11 @@
+#Tue Dec 04 14:41:59 EST 2007
+eclipse.preferences.version=1
+org.emonic.base.build.file=project.build
+org.emonic.base.build.mechanism=nant
+org.emonic.base.codecompletion.dll.file0=/home/rcjsuen/mono-1.2.5/lib/mono/1.0/nunit.core.dll
+org.emonic.base.codecompletion.dll.file1=/home/rcjsuen/mono-1.2.5/lib/mono/1.0/nunit.framework.dll
+org.emonic.base.codecompletion.total.dll.dir=0
+org.emonic.base.codecompletion.total.dll.file=2
+org.emonic.base.codecompletion.total.src=0
+org.emonic.base.project.copyright=(c) all rights reserved
+org.emonic.base.project.defaultNamespace=

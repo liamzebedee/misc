@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test Plug-in
+Bundle-SymbolicName: emonic.test
+Bundle-Version: 0.4.1
+Bundle-Activator: emonic.test.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.junit,
+ org.emonic.base,
+ org.eclipse.core.resources,
+ org.eclipse.jface.text,
+ org.eclipse.ui.ide,
+ org.eclipse.search,
+ org.eclipse.ui.editors
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-Vendor: emonic.org

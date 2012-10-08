@@ -1,0 +1,2 @@
+[27-Mar-2011 20:07:57] PHP Parse error:  syntax error, unexpected T_INCLUDE in /home/cryptum1/public_html/portal/index.php on line 3
+[29-Mar-2011 05:17:22] PHP Warning:  Unknown: Your script possibly relies on a session side-effect which existed until PHP 4.2.3. Please be advised that the session extension does not consider global variables as a source of data, unless register_globals is enabled. You can disable this functionality and this warning by setting session.bug_compat_42 or session.bug_compat_warn to off, respectively in Unknown on line 0

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Additional Plugins</title>
+</head>
+<body>
+<br>
+<h1>Additional Plugins</h1>
+
+<p>There are some additional plugins to work with emonic available. They have various status of stability and functionality</p>
+
+<br>
+<h2>emonic.base.build.ant</h2>
+<table><tr><td>Name</td><td>Stability</td><td>Short Description</td></tr>
+<tr><td>emonic.base.build.ant</td><td>Beta</td><td>Ant-BuildMechanism</td></tr></table>
+<p>
+The ant build mechanism allows You to use the with eclipse shipped "java"-Ant for building .net applications. 
+We separated it in an extra plugin to avoid the dependency to the java-development-framework of eclipse (i.e. You can 
+now use the C++ - eclipse-distribution for emonic if You don't require this build mechanism)
+</p> 
+<h2>org.emonic.debugger</h2>
+<table><tr><td>Name</td><td>Stability</td><td>Short Description</td></tr>
+<tr><td>org.emonic.debugger</td><td>Alpha</td><td>A debugger for mono</td></tr></table>
+<p>A debugger based on the mono mcs debugger. You can only debug code based on mono - no microsoft .net code. 
+The debugger consists on 2 parts: A web service which provides the "debugging service" and a plugin for emonic 
+which calls the web service. Since the mcs- debugger was not very stable in the last years, this plugin might 
+work not with every mono-version.
+
+This plugin comes with patched mcs-libraries for <it>linux</it>. For all other platforms You have to rebuild 
+this libraries from cvs.
+<h2>emonic.base.build.csant</h2>
+<table><tr><td>Name</td><td>Stability</td><td>Short Description</td></tr>
+<tr><td>emonic.base.build.csant</td><td>Alpha</td><td>CSAnt-Support for emonic</td></tr></table>
+<p>
+CSant is the build-System of the dotgnu-framework (http://dotgnu.org). This plugin enables You to work with 
+the build mechanism of this framework.
+</p>
+<h2>org.emonic.debug.remote</h2>
+<table><tr><td>Name</td><td>Stability</td><td>Short Description</td></tr>
+<tr><td>org.emonic.debug.remote</td><td>Alpha</td><td>Remote-Application-starter for emonic</td></tr></table>
+<p>
+Despite its name, this is no debugger! It is a framework for starting .net-applications remote. 
+It requires the org.eclipse.rse-plugins.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="emonic.dotNet"
+            class="org.emonic.base.wizards.newprojectwizard.NewDotNetProjectResourceWizard"
+            finalPerspective="org.emonic.base.emonicperspective"
+            hasPages="true"
+            icon="icons/newproject_wiz.gif"
+            id="org.emonic.base.wizards.NewProjectWizard.wizard1"
+            name=".NET Project"
+            project="true">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.emonic.base.wizards.NewProjectWizard.actionSet2"
+            label="New Wizard Action Set"
+            visible="true">
+         <action
+               class="org.emonic.base.wizards.newprojectwizard.NewDotNetProjectActionDelegate"
+               icon="icons/newproject_wiz.gif"
+               id="org.emonic.base.wizards.NewProjectWizard.action1"
+               label="New .NET Project"
+               state="true"
+               style="push"
+               toolbarPath="Normal/CSharpWizards">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

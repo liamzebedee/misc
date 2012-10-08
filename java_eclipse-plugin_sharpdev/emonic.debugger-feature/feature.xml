@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.emonic.debugger_feature"
+      label="org.emonicdebugger"
+      version="0.0.2"
+      os="linux">
+
+   <description url="http://www.example.com/description">
+      Debugger for emonic - alpha and only linux!
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      (C) emonic.org
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      EPL
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.debug.core"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.debug.ui"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.emonic.base"/>
+      <import plugin="org.emonic.debug.core"/>
+      <import plugin="org.emonic.debug.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+   </requires>
+
+   <plugin
+         id="org.emonic.debugger"
+         os="linux"
+         download-size="0"
+         install-size="0"
+         version="0.4.0"/>
+
+</feature>

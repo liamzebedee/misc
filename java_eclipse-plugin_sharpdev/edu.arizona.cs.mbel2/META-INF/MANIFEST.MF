@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %bundle.name
+Bundle-SymbolicName: edu.arizona.cs.mbel2
+Bundle-Version: 1.9.0
+Bundle-ClassPath: .
+Bundle-Vendor: %bundle.vendor
+Bundle-Localization: plugin
+Export-Package: edu.arizona.cs.mbel2,
+ edu.arizona.cs.mbel2.instructions,
+ edu.arizona.cs.mbel2.mbel,
+ edu.arizona.cs.mbel2.metadata,
+ edu.arizona.cs.mbel2.parse,
+ edu.arizona.cs.mbel2.signature
+Bundle-RequiredExecutionEnvironment: J2SE-1.4

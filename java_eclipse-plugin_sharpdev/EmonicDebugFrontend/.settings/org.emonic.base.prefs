@@ -1,0 +1,9 @@
+#Wed Feb 06 16:41:03 CET 2008
+eclipse.preferences.version=1
+org.emonic.base.build.file=DebugFrontend.build
+org.emonic.base.build.mechanism=nant
+org.emonic.base.codecompletion.total.dll.dir=0
+org.emonic.base.codecompletion.total.dll.file=0
+org.emonic.base.codecompletion.total.src=0
+org.emonic.base.project.copyright=(c) all rights reserved
+org.emonic.base.project.defaultNamespace=Emonic.Debugfrontend

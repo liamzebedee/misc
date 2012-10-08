@@ -1,0 +1,84 @@
+/*
+Theme Name: Cryptum
+Layout: Content
+*/
+
+/* =Header
+----------------------------------------------- */
+.site-title {
+	text-align: center;
+	font-size: 2em;
+}
+.site-description {
+	text-align: center;
+	font-size: 1.4em;
+}
+
+/* =Content
+----------------------------------------------- */
+
+.site-content {
+	clear: both;
+	padding: 1%;
+}
+
+#content {
+	max-width: 920px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center; /* For centering inline-block elements */
+}
+
+#secondary { /* Sidebar 1 */
+	overflow: hidden;
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* =Footer
+----------------------------------------------- */
+
+.site-footer {
+	display: block !important;
+	clear: both !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-bottom: auto !important;
+	color: #0f3 !important;
+}
+.site-footer #credits {
+	text-align: center;
+}
+
+/* =Static Front Page
+----------------------------------------------- */
+
+.home.page #masthead {
+	clear: both;
+}
+.blog .paged #masthead {
+	clear: both;
+}
+
+/* =Dynamic Front Page
+----------------------------------------------- */
+#content .tiles {
+	
+}
+/*
+ * Below are some cool CSS selectors that make:
+ *  - the 1st child width=1px, height=2px
+ *  - the 2nd child width=2px, height=4px
+ * and so on...
+ * NOTE: For some reason, nth-child is not zero-based. Take this into consideration.
+ */
+#content .tiles .tile:nth-child(1) {
+	width: 100px;
+	height: 70px;
+}
+#content .tiles .tile:nth-child(2) {
+	width: 300px;
+	height: 70px;
+}

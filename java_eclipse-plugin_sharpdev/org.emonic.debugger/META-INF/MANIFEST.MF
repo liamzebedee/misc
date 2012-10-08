@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Emonic Debugger
+Bundle-SymbolicName: org.emonic.debugger; singleton:=true
+Bundle-Version: 0.4.0
+Bundle-ClassPath: emonicdebugger.jar,
+ axis.jar,
+ jaxrpc.jar,
+ commons-logging-1.0.4.jar,
+ commons-discovery-0.2.jar,
+ wsdl4j-1.5.1.jar,
+ saaj.jar
+Bundle-Activator: org.emonic.debugger.DebuggerPlugin
+Bundle-Localization: plugin
+Export-Package: org.emonic.debugger,
+ org.emonic.debugger.frontend,
+ org.emonic.debugger.launching,
+ org.emonic.debugger.ui,
+ org.emonic.debugger.webinterface
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.core,
+ org.eclipse.core.resources,
+ org.eclipse.debug.ui,
+ org.eclipse.ui.console,
+ org.emonic.base,
+ org.emonic.debug.core,
+ org.emonic.debug.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.editors,
+ org.eclipse.jface.text,
+ org.eclipse.ui.workbench.texteditor
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-Vendor: emonic.org

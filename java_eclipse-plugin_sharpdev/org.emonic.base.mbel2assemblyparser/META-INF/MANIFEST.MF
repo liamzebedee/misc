@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mbel2AssemblyParser
+Bundle-SymbolicName: org.emonic.base.mbel2assemblyparser;singleton:=true
+Bundle-Version: 0.4.0
+Bundle-Activator: org.emonic.base.mbel2assemblyparser.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.emonic.base;bundle-version="0.4.0",
+ edu.arizona.cs.mbel2;bundle-version="1.9.0"
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: J2SE-1.4

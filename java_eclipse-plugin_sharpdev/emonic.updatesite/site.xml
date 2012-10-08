@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.emonic.base.build.csant_feature_0.4.0.jar" id="org.emonic.base.build.csant_feature" version="0.4.0"/>
+   <feature url="features/org.emonic.debugger_feature_0.0.2.jar" id="org.emonic.debugger_feature" version="0.0.2" os="linux"/>
+   <feature url="features/org.emonic.debug.remote_feature_0.4.0.jar" id="org.emonic.debug.remote_feature" version="0.4.0"/>
+   <feature url="features/org.emonic.base.build.ant_feature_0.4.0.jar" id="org.emonic.base.build.ant_feature" version="0.4.0"/>
+   <feature url="features/org.emonic.base_feature_0.4.0.jar" id="org.emonic.base_feature" version="0.4.0"/>
+</site>

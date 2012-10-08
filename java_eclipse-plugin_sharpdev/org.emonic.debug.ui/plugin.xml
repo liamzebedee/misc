@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="remoteLaunchingTab" name="Remote Launching Tab" schema="schema/remoteLaunchingTab.exsd"/>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            class="org.emonic.debug.internal.ui.launching.DotNetLaunchShortcut"
+            icon="icons/full/etool16/dotnet_app.gif"
+            id="org.emonic.debug.internal.ui.launching.dotNetLaunchShortcut"
+            label=".NET Application"
+            modes="run">
+         <contextualLaunch>
+           <enablement>
+             <with variable="selection">
+               <count value="1"/>
+               <iterate>
+                 <or>
+                   <test property="org.eclipse.debug.ui.matchesContentType" value="org.emonic.base.dotNetExecutable"/>
+                 </or>
+               </iterate>
+             </with>
+           </enablement>
+  		 </contextualLaunch>
+      </shortcut>
+  </extension>
+  <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="org.emonic.debug.internal.ui.launching.DotNetLaunchConfigurationTabGroup"
+            description="The tab group for launching .NET applications"
+            id="org.emonic.debug.internal.ui.launching.dotNetLaunchLaunchConfigurationTabGroup"
+            type="org.emonic.debug.core.dotNetApplication">
+            <launchMode
+                  mode="run"
+                  description="Run a .NET application">
+            </launchMode>
+      </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="org.emonic.debug.core.dotNetApplication"
+            icon="icons/full/etool16/dotnet_app.gif"
+            id="org.emonic.debug.ui.dotNetApplicationLaunchConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+   <extension
+         point="org.eclipse.ui.console.consolePatternMatchListeners">
+            <consolePatternMatchListener
+                  class="org.emonic.debug.internal.ui.launching.DotNetExceptionConsoleTracker"
+                  id="org.emonic.debug.internal.ui.launching.dotNetExceptionConsoleTracker"
+                  regex="at (\w\.)*\w.*\(.*\) (.*)? in .*:(line )?[0-9]+">
+         <enablement>
+            <or>
+               <test property="org.eclipse.debug.ui.processTypeTest" value="exe"/>
+            </or>
+         </enablement>
+      </consolePatternMatchListener>
+   </extension>
+</plugin>

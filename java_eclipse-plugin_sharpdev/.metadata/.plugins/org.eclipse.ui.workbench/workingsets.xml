@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340099579650_4" label="emonic" name="emonic">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/nunitbridge" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/emonic.base-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/emonic.debugger-feature" type="4"/>
+<item elementID="=org.emonic.base.wizards.NewFormProjectWizard" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=emonic.base.build.ant" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.base.wizards.NewProjectWizard" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.debugger" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/emonichomepage" type="4"/>
+<item elementID="=edu.arizona.cs.mbel2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.base.wizards.NewLibraryProjectWizard" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/emonic.base.build.csant-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/emonic.updatesite" type="4"/>
+<item elementID="=org.emonic.debug.core" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.debug.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=emonic.base" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.base.wizards.ImportProjectFSWizard" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.base.mbel2assemblyparser" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=emonic.base.build.csant" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EmonicDebugFrontend" type="4"/>
+<item elementID="=emonic.test" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.nunit" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=emonic.base.build.msbuild" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/emonicinformator" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/emonic.base.build.ant-feature" type="4"/>
+<item elementID="=emonic.base.build.nant" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.monodoc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.emonic.base.wizards.NewConsoleProjectWizard" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340095348847_0" label="Window Working Set" name="Aggregate for window 1340095348844"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340097514503_1" label="Window Working Set" name="Aggregate for window 1340097514503"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340098904183_2" label="Window Working Set" name="Aggregate for window 1340098904183"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340098905600_3" label="Window Working Set" name="Aggregate for window 1340098905600"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340167305054_5" label="Window Working Set" name="Aggregate for window 1340167305054"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340180624729_6" label="Window Working Set" name="Aggregate for window 1340180624729"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340263715595_7" label="Window Working Set" name="Aggregate for window 1340263715595"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340349677719_8" label="Window Working Set" name="Aggregate for window 1340349677719"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340411244213_9" label="Window Working Set" name="Aggregate for window 1340411244213"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340437367449_10" label="Window Working Set" name="Aggregate for window 1340437367449"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1340616316253_11" label="Window Working Set" name="Aggregate for window 1340616316253"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1341063242861_12" label="Window Working Set" name="Aggregate for window 1341063242861"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1341820661303_13" label="Window Working Set" name="Aggregate for window 1341820661303"/>
+<mruList name="emonic"/>
+</workingSetManager>

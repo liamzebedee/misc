@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Emonic Debug Core
+Bundle-SymbolicName: org.emonic.debug.core;singleton:=true
+Bundle-Version: 0.4.1
+Bundle-Activator: org.emonic.debug.core.EmonicDebugCore
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.debug.core,
+ org.eclipse.core.resources,
+ org.emonic.base,
+ org.eclipse.ui;resolution:=optional,
+ org.eclipse.ui.console
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Export-Package: org.emonic.debug.core,
+ org.emonic.debug.internal.core
+Bundle-Vendor: emonic.org

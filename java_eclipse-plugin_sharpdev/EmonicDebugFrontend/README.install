@@ -1,0 +1,21 @@
+This is a web service front-end for the Mono Debugger v0.60.
+
+Works only with executables built against mono, no support for CSC! 
+
+To install it:
+- Adapt the property "debuggerLibs" of the build file DebugFrontend.build. It should contain the
+  directory where the original Mono.Debugger.Backend.dll and Mono.Debugger.dll of the MDB v0.60
+  can be found, i.e. <your-mono-path>/lib/mono/mono-debugger.
+- Build the project. This should generate bin/EmonicWebservice.dll.
+
+To run it:
+- Start xsp2 in the project dir.
+- You can test the web service with a web browser - navigate to the URL 
+  http://localhost:8080/EmonicDebuggingService.asmx.
+  All methods are then listed, you can test them via the "Test Form" tab.
+
+Some notes:
+-----------
+1) A patch for MDB was necessary due to protection levels. It is contained in mdb0.60.patch.
+2) The Quit command also quits xsp2.
+3) A detailed specification of the commands is included in WebserviceCommands.xls.

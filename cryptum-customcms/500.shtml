@@ -1,0 +1,8 @@
+<?
+
+?>
+<!--#echo var="REMOTE_ADDR" -->You requested <!--#echo var="REQUEST_URI" --><br>
+
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+--> 

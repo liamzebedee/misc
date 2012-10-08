@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="NUnit"
+            icon="icons/full/eview16/nunit.gif"
+            category="org.emonic.ui"
+            class="org.emonic.nunit.internal.ui.views.NUnitTestRunnerView"
+            id="org.emonic.nunit.internal.views.NUnitTestRunnerView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="org.emonic.nunit.internal.core.NUnitLaunchConfiguration"
+            id="org.emonic.nunit.nunitTest"
+            modes="run"
+            name="NUnit">
+      </launchConfigurationType>
+   </extension>
+  <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="org.emonic.nunit.internal.ui.launching.NUnitLaunchConfigurationTabGroup"
+            description="The tab group for launching NUnit tests"
+            id="org.emonic.debug.internal.ui.launching.nunitLaunchConfigurationTabGroup"
+            type="org.emonic.nunit.nunitTest">
+            <launchMode
+                  mode="run"
+                  description="Run an NUnit test"/>
+      </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="org.emonic.nunit.nunitTest"
+            icon="icons/full/eview16/nunit.gif"
+            id="org.emonic.debug.ui.nunitTestLaunchConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+</plugin>

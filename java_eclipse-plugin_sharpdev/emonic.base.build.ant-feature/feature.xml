@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.emonic.base.build.ant_feature"
+      label="emonicant"
+      version="0.4.1">
+
+   <description url="http://www.example.com/description">
+      Support for ant-build via emonic
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      (C) emonic.org
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      Licensed under EPL 1.0
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ant.core"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.emonic.base"/>
+   </requires>
+
+   <plugin
+         id="org.emonic.base.build.ant"
+         download-size="0"
+         install-size="0"
+         version="0.4.1"
+         unpack="false"/>
+
+</feature>

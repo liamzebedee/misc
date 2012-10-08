@@ -1,0 +1,32 @@
+!SESSION 2012-06-20 18:23:37.096 -----------------------------------------------
+eclipse.buildId=M20120223-0900
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_AU
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2012-06-21 12:06:08.985
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for SortedMap {key=Ljava/util/SortedMap<Ljava/util/SortedMap;{0}*Ljava/util/SortedMap;{1}*>;} [in SortedMap.class [in java.util [in C:\Program Files\Java\jre6\lib\rt.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:995)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:621)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:567)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:559)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2012-06-21 12:06:08.985
+!MESSAGE Timed out while retrieving the attached javadoc for SortedMap {key=Ljava/util/SortedMap<Ljava/util/SortedMap;{0}*Ljava/util/SortedMap;{1}*>;} [in SortedMap.class [in java.util [in C:\Program Files\Java\jre6\lib\rt.jar]]] 
+!SESSION 2012-06-25 19:24:40.053 -----------------------------------------------
+eclipse.buildId=M20120223-0900
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_AU
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-06-25 19:24:46.661
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

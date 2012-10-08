@@ -1,0 +1,23 @@
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+
+ErrorDocument 404 /404.shtml
+
+DirectoryIndex index.cpm index.php index.html index.htm index.shtml index.pl index.jsp
+
+AuthName cryptum.net
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+Action cry /cgi-bin/cpm.pl
+AddHandler cry .cpm 
+
+
+

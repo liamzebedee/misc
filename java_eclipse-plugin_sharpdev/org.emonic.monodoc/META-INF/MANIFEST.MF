@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Monodoc Plug-in
+Bundle-SymbolicName: org.emonic.monodoc;singleton:=true
+Bundle-Version: 0.4.1
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Require-Bundle: org.emonic.base
+Import-Package: org.eclipse.core.runtime;common=split

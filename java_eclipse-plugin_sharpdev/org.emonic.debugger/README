@@ -1,0 +1,8 @@
+To make the debugger plug-in work, you have to install
+the web service into the services/ directory.
+
+The web service is contained in the .NET project
+"Emonic.DebugFrontend".
+
+Use the build_release.sh shell script of this project
+to install the web service as needed.

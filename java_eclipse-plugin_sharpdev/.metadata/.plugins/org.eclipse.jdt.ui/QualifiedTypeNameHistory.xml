@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.PlatformUI"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.application.WorkbenchAdvisor"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.progress.WorkbenchJob"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.IStatus"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.IProgressMonitor"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.progress.IProgressConstants"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.jobs.Job"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.Plugin"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.action.Action"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.action.IAction"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.Platform"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="sharpdev.PluginActivator"/>
+</qualifiedTypeNameHistroy>

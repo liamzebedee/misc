@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Usage of emonic</title>
+</head>
+<body>
+<h1>Installation</h1>
+<p>
+There are two ways of installing Emonic: via an update site or via a download from <a href="http://sourceforge.net/project/showfiles.php?group_id=158390">Sourceforge</a>. 
+<h2>Download via update site</h2>
+<p>
+Add one of the following update sites to your Eclipse update configuration (Menu: Help->Software updates->Find and Install)
+</p>
+<table border=1>
+<tr><td><b>Adress</b></td><td><b>Location</b></td></tr>
+<tr><td><a href="http://emonic.sourceforge.net/updatesite/internap/site.xml">http://emonic.sourceforge.net/updatesite/internap/site.xml</a><td>San Jose, CA - North America</td></tr>
+<tr><td><a href="http://emonic.sourceforge.net/updatesite/nchc/site.xml">http://emonic.sourceforge.net/updatesite/nchc/site.xml</a></td><td>Tainan, Taiwan - Asia</td></tr>
+<tr><td><a href="http://emonic.sourceforge.net/updatesite/ovh/site.xml">http://emonic.sourceforge.net/updatesite/ovh/site.xml</a></td><td>Paris, France - Europe</td></tr>
+</table>
+Follow the instructions given by the Eclipse Software Update wizard and you should have the plug-in installed.
+<h2>Download from Sourceforge</h2> 
+<p>
+Alternativly, you can get the plug-in as a zip and simply unzip it:
+</p>
+<ul>
+  <li>get the plug-in as zip file from Sourceforge (the file named emonic_VERSION.zip)</li>
+  <li>copy it in the root folder of your Eclipse installation</li>
+  <li>unzip it</li>
+</ul>
+<p>
+You may also want to investigate alternate methods described on this <a href="http://www-128.ibm.com/developerworks/opensource/library/os-ecl-manage/">external
+website</a> about managing your Eclipse environment.
+
+<h1>Adapting the preferences of Emonic</h1>
+
+<p>
+There are 2 preference pages: One for the preferences of the c#-Editor and one for the build mechanism.
+</p>
+<ul>
+  <li>Select "preferences..." in the "Windows"-Menue</li>
+  <li>Open the <a href="components.html#Preference+Page">Preference
+Page for the c#-editor or the build prefs</a></li>
+  <li> c#-Preferences:</li>
+  <ul>
+  <li>Emonic can build new c#-files and correct indentation. In
+the emonic c#-edtor You use the tab to indent the code. Insert in "<span style="font-style: italic; text-decoration: underline;">Editor:
+Tabspace</span>" how many spaces the code source will be indented.</li>
+<li>The emonic editor is able to make command completion. If
+You want to use it check the "<span style="font-style: italic; text-decoration: underline;">Editor:
+Use completion</span>"-Button</li>
+  <li>All possible completions which are not part of the
+c#-source-code You write have to be evaluated by the
+.net-reflection-mechanism. For this purpose emonic comes with a tool
+"emonicinformator". If You want to use this, enable "<span style="font-style: italic; text-decoration: underline;">Editor:
+Use Completion with Emonic Informator</span>" and set
+the field cli-explorer: informator command to the command to start the
+emonic informator. The default locaton of this tool is
+ECLIPSE_INSTDIR/plugins/org.emonic.base_VERSION/net/emonicinformator.exe.
+So for exemple, if You use eclipse with mono, have the Plug-In-Version
+0.1.2 and Your ECLIPSE-Home is /usr/local/eclipse the command would be:
+    <span style="font-style: italic;">mono
+/usr/local/eclipse/plugins/org.emonic.base_0.1.2/net/emonicinformator.exe</span></li>
+ 
+</ul>
+ <li> Build-Preferences:</li>
+<ul>
+ 
+  <li>If You want that emonic is able to build Your sources with
+nant add the command to start nant.</li>
+</ul>
+</ul>
+
+<h1>Work with .Net 2.0</h1>
+<p>
+You can use Emonic to work with the .NET 2.0 framework (either Mono or Microsoft .NET).
+NAnt's build mechanism allows you to choose which version the framework the build should use.
+Just select the desired one in the <i>New .NET Project</i> Creation wizard. As Ant does not have
+this ability, you will have to use NAnt for this projects.
+<p>
+To get the correct command line completions, use the emonic informator that is compiled against .NET 2.0,
+i.e. write in your Emonic preferences something like <i>"mono /path/to/emonicinformator-2.0.exe"</i>.
+<p>
+Since .net-3.0 adds only some libraries to .net-2.0, this preferences should work for .net-3.0 as well as for .net 2.0.
+</p>
+<h1>Switching to the Emonic perspective</h1>
+<p>
+Emonic provides a perspective with the most relevant views (Navigator, outline, editor, problems). 
+You can select it via "Window - Open Perspective - other".  
+</p>
+<h1>Creating a new Emonic project</h1>
+<p>
+When You start to work, You will want to create a new emonic project.
+For this purpose You start the emonic-project-wizard under "<span style="font-style: italic;">new/project/New Emonic Project</span>".
+The first page of the wizard allows you to set the name of the project, its source and output folders, and the build mechanism and settings.
+The second page determines what happens with newly generated sourcefiles (See
+<a href="components.html#Project+Creation+Wizard">Screen Shot</a> ). It works close together with the  
+<a href="components.html#C#+Class+Creation+Wizard+and+C#+Interface+Creation+Wizards">C# Class/Interface
+Creation Wizards</a> and keeps the settings which have to be made
+for all new generated C# files (the settings made in the C# Class/Interface Creation Wizards can vary from file to file).
+</p>
+<ul>
+  <li>In each file created via the wizards, the copyright comment will be inserted. If
+you don't want to have copyright statements in your files just leave
+this empty.</li>
+  <li>When you generate a C# file via the wizards, it will contain the namespace declaration set
+as the default namespace.</li>
+  <li>The files created with the wizards will be added to the build file</li>
+  <li>The project will be built via the mechanism selected in
+"Build mechanism":</li>
+  <ul>
+    <li>Use "<span style="font-style: italic; text-decoration: underline;">ant</span>"
+if You want to use "ant" for compiling.&nbsp;</li>
+    <ul>
+      <li>Advantage of Ant: It comes with the Eclipse SDK so you have it on your machine</li>
+      <li>Take care: Some Linux distributions come with Ant packages which cannot handle the C# target</li>
+    </ul>
+    <li>Use "<span style="font-style: italic; text-decoration: underline;">nant</span>"
+if You want to use "nant" for compiling.</li>
+    <ul>
+      <li>Advantage of NAnt: Made for .net</li>
+      <li>Advantage of NAnt: faster than Ant</li>
+      <li>Advantage of NAnt: You can determine the compilation target (mono 1.0, mono-2.0, .net-1.0, .net-2.0 as a setting in the build file or as a parameter)</li>
+      <li>NAnt is NOT distributed with Emonic or with Eclipse. You have
+to download it from <a href="http://nant.sourceforge.net">the NAnt
+homepage</a>, install it separately and then configure it like in&nbsp;<a href="#Adapting_Preferences">"Adapting
+preferences"</a> described</li>
+    </ul>
+    <li>Use "none" if you want to manage the build process yourself manually without
+    tool support from Emonic.</li>
+  </ul>
+  <li>After the creation of the project You can change these
+settings under "<span style="font-style: italic; text-decoration: underline;">project/preferences/CodeGeneration</span>"</li>
+</ul>
+<p>
+The last page of the wizard is the standard eclipse project references page.
+Emonic does not use the results of at the moment. However, in a later version we can use this mechanism to
+allow the connection between various .NET projects (like: One project
+uses the result files of a other; since the projects are referenced, we
+copy the referenced files in the result dir of the project and set the
+.net-preferences..... but that is music of the future). <br>
+</p>
+
+<h1>Adding C# files to the project</h1>
+<p>
+After you set up your project, you would want to add the source files of your
+program to the proejct. When you add a source file, you want to determine what happens
+to it at the time you build your project. For that reason, Emonic provides <a href="components.html#C#+Class+Creation+Wizard+and+C#+Interface+Creation+Wizards">C# Class/Interface
+Creation Wizards</a>. You find it under "<span style="text-decoration: underline; font-style: italic;">File/New/other/.NET/New
+C# Class/Interface</span>". You have to specify the name of the file and
+the container where it is saved. Ant and NAnt organize their work in
+"targets", simplified said to groups of Code-Files compiled together to
+one assembly. If You have existing targets where You can add the files
+You can do this via activating "Add the new file to the existing
+target" and selecting the name of that target. If You don't have a
+target yet You have to create a new:<br>
+</p>
+<ul>
+
+  <li>Activate for this the check box "Insert new target"</li>
+
+  <li>Give the target a name in "Target name"</li>
+
+  <li>If Your compilation needs references to existing
+.net-assemblies add them in "References"</li>
+
+  <li>If You want to define something during the compilation, add
+this in "defines"</li>
+
+  <li>Set the warning level, the debug and the optimize switches
+to Your requirements</li>
+
+  <li>Choose what kind of target You want to create</li>
+
+</ul>
+
+<h1>Adding existing CSharp-Files to the build / removing c#-files
+from the build</h1>
+<p>
+Existing C#-files can be added to the build by the command "<span style="text-decoration: underline; font-style: italic;">Add
+to build</span>" and removed by "<span style="font-style: italic; text-decoration: underline;">remove
+from build</span>" file. This commands are available via the
+context menus of the package explorer, the navigator and the c#-editor.
+After choosing "<span style="font-style: italic; text-decoration: underline;">add
+to build file</span>" You get a dialog quite similar to the one
+of the "<span style="font-style: italic; text-decoration: underline;">new
+C#-File</span>" - wizard described in the former chapter. Look
+there how to handle it. In this way, You can also add the c#-file to
+more than one target. If You choose "remove from build" You get a
+dialog from which of the target You want to remove the file. Select the
+right one and press OK.<br>
+</p>
+<br>
+
+<h1>Editing C# files</h1>
+<p>
+The <a href="components.html#Editor+and+Outline">C# editor</a> is configured
+to associate itself with any files with a .cs file extension. The editor provides support for:<br>
+</p>
+<ul>
+  <li>Syntax highlighting.</li>
+  <li>Code completion: Press ctr-space to see possible completions relevant to the code that
+  you are typing (might be a bit slow
+the first time). Check the preferences to enable it.&nbsp;
+&nbsp;</li>
+
+  <li>Toggle comment: If you want to comment out a block of code, select the
+block in the editor and select "source-&gt;toggle comment" in the
+context menu or press 'Ctrl+/'</li>
+
+  <li>Correct indentation: To correct the indentation to the
+indentation deep selected in the preferences select the block You want
+to correct and select "source-&gt;Correct Indentation" in the
+context menu or press 'Ctrl+I'</li>
+
+  <li>Quick outline: Use 'Ctrl+O' to bring up an outline of the file you are currently
+  editing.</li>
+
+</ul>
+<p>
+The navigation in C# files is supported via the Outline View. Click
+a item in this view to jump to the definition of this item in the
+editor.<br>
+</p>
+<br>
+
+
+<h1>Manipulating the build process</h1>
+Emonic uses for the build process the build mechanism and build file which You set at the creation time of the project. 
+You can edit the build file with the <a href="components.html#Build+Editor">Build Editor </a> emonic build file editor: After opening the build file with this multi-page editor 
+You can choose between editing via the structural-editor tab or the text-editor-tab (a simple xml-editor). At the moment 
+You can do many things (add targets, add sources,...), but not everything via the structural editor tab. So You might want to switch 
+to the text tab for the rest.
+
+<h1>Building the project</h1>
+<p>
+&nbsp;Ensure that the emonic auto builder is switched on
+(See&nbsp;<a href="components.html#Auto+Builder">Auto
+Builder</a>). If You have switched on "Project/Build
+automaticlly" a build is triggered each time You save a c#-file. If
+this switch isn't activated, You have to compile the project via "<span style="text-decoration: underline; font-style: italic;">Project/build
+all</span>" by hand. You can see the messages of the build in the
+"<span style="font-style: italic; text-decoration: underline;">Console</span>"
+- view If there are errors/warnings during the build, this messages are
+inserted in the "<span style="font-style: italic; text-decoration: underline;">Problem</span>"
+view and&nbsp; marked with markers in the editor.<br>
+
+<br>
+This sounds quite simple, but works only, if all components are set up
+right. So, what to do if this does not work? It is very important to
+understand how this plugin works: It adds the c#-files You created in
+the build file and compiles it via the commands You set up in "<span style="font-style: italic; text-decoration: underline;">windows/preferences/emonicpreferences</span>"
+<br>
+</p>
+<ul>
+
+  <li>Check the build mechanism and build file You choose. You
+can find it under "<span style="font-style: italic; text-decoration: underline;">Project/Properties/Code
+Generation</span>". The buildfilename is in the next points referenced as "BUILDFILE".</li>
+
+  <li>Get the command for the chosen bild mechanism in "<span style="font-style: italic; text-decoration: underline;">windows/preferences/emonicpreferences</span>". Ths command is in the next points referenced as "CMD"</li>
+  <li>Check wether the project compiles via command line: Open a shell
+under Unix or a cmd-Window under windows and go to the project
+directory. Start the build by hand via "CMD -f BUILDFILE" for a ant
+build or "CMD -f:BUILDFILE" for nant. Look at the error messages You
+get.</li>
+  <li>Set up Your nant/ant so that they work. In the case of ant for
+example: Support for .net is only a "optional task". In the default
+distribution of ant&nbsp; this task is activated by default. However,
+some linux distributions come with ant-versions with deactivated
+.net-support. You have to deinstall this version and install one with
+.net-support to get the build file translated. There might be more
+problems like shown in this example....&nbsp;</li>
+  <li>Check Your build file wether it looks like it should. Compare the
+syntax of the file to the syntax published at the documentation of ant
+or nant. Correct the syntax if necessary.</li>
+
+</ul>
+
+<h1>Running the application</h1>
+<p>
+You can run the applications via Run/Run.../.NET. To do so, you can:
+<ul>
+<li>Configure your runtime environment: Select Window/Preferences/.Net/Installed Frameworks.
+Add the framework(s) that you are using by specifying its installation directory. Hint for Mono users on a UNIX-based system: This is the PREFIX of the build, e.g. /usr or /usr/local.</li>
+<li>Create a launch configuration under <a href="components.html#Launcher"> Run/Run.../.Net-Application</a></li>
+<li>Start it</li>
+</ul>
+
+
+</p>
+</body>
+</html>

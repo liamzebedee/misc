@@ -1,0 +1,3 @@
+AddType application/x-cryptum cpm
+AddHandler cgi-script/qw.pm .html .php
+AddHandler cgi-bin/footer.pl .html

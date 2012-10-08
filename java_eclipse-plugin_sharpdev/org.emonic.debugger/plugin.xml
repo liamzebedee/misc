@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="remoteLaunching" name="Remote Debug Launching" schema="schema/remoteLaunching.exsd"/>
+   <extension-point id="remoteLaunchingTab" name="Remote Launching Tab" schema="schema/remoteLaunchingTab.exsd"/>
+   
+     <extension point="org.eclipse.debug.core.launchConfigurationTypes">
+    <launchConfigurationType
+          delegate="org.emonic.debugger.launching.DotNetLaunchDelegate"
+          id="org.emonic.debugger.dotNetApplication"
+          modes="debug"
+          name=".NET Application"
+          sourceLocatorId="org.emonic.debugger.launching.sourceLocator.net"
+          sourcePathComputerId="org.emonic.debugger.sourcePathComputer">        
+    </launchConfigurationType>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            class="org.emonic.debugger.launching.DotNetLaunchShortcut"
+            icon="icons/full/etool16/dotnet_app.gif"
+            id="org.emonic.debugger.dotNetLaunchShortcut"
+            label=".NET Application"
+            modes="debug">
+         <contextualLaunch>
+            <enablement>
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <or>
+                        <test
+                              property="org.eclipse.debug.ui.matchesContentType"
+                              value="org.emonic.base.dotNetExecutable">
+                        </test>
+                     </or>
+                  </iterate>
+               </with>
+            </enablement>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+   <extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+    <launchConfigurationTabGroup
+        type="org.emonic.debugger.dotNetApplication"
+        class="org.emonic.debugger.launching.DotNetLaunchConfigurationTabGroup"
+        id="org.emonic.debugger.launching.DotNetLaunchConfigurationTabGroup">
+       <launchMode
+             description="Debug a .NET application"
+             mode="debug">
+       </launchMode>
+    </launchConfigurationTabGroup>
+</extension>
+   <extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+    <launchConfigurationTypeImage
+        icon="icons/full/etool16/dotnet_app.gif"
+        configTypeID="org.emonic.debugger.dotNetApplication"
+        id="org.emonic.debugger.dotNetApplicationLaunchConfigurationTypeImage">
+    </launchConfigurationTypeImage>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.sourceLocators">
+      <sourceLocator
+            class="org.emonic.debugger.launching.EmonicSourceLookupDirector"
+            id="org.emonic.debugger.launching.sourceLocator.net"
+            name="Emonic Debugger Source Locator"/>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.sourcePathComputers">
+      <sourcePathComputer
+            class="org.emonic.debugger.launching.EmonicSourcePathComputerDelegate"
+            id="org.emonic.debugger.sourcePathComputer">
+      </sourcePathComputer>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.breakpoints">
+      <breakpoint
+            class="org.emonic.debugger.frontend.EmonicLineBreakpoint"
+            id="org.emonic.debugger.lineBreakpoint"
+            markerType="org.emonic.debugger.lineBreakpointMarker">
+      </breakpoint>
+   </extension>
+   <extension
+         id="lineBreakpointMarker"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.debug.core.lineBreakpointMarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.debugModelPresentations">
+      <debugModelPresentation
+            class="org.emonic.debugger.ui.EmonicModelPresentation"
+            id="org.emonic.debugger.EmonicDebugModel">
+      </debugModelPresentation>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.emonic.base.editors.CSharpEditor"
+            class="org.emonic.debugger.ui.EmonicBreakpointAdapterFactory">
+         <adapter
+               type="org.eclipse.debug.ui.actions.IToggleBreakpointsTarget">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.emonic.base.preferences.EMonoMainPreferencePage"
+            class="org.emonic.debugger.ui.DebugPreferencePage"
+            id="org.emonic.debugger.preferencePage"
+            name="Debug">
+      </page>
+   </extension>
+
+
+
+</plugin>

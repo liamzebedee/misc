@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="392" class="org.emonic.base.EMonoPlugin" localization="plugin" name="Emonic Plug-in" project="emonic.base" provider="emonic.org">
+		<library name="emono.jar"/>
+	</bundle>
+	<bundle bundleID="399" class="org.emonic.base.wizards.importprojectfswizard.Activator" localization="OSGI-INF/l10n/bundle" name="ImportProjectFSWizard" project="org.emonic.base.wizards.ImportProjectFSWizard"/>
+	<bundle bundleID="398" class="org.emonic.base.mbel2assemblyparser.Activator" localization="OSGI-INF/l10n/bundle" name="Mbel2AssemblyParser" project="org.emonic.base.mbel2assemblyparser"/>
+	<bundle bundleID="394" class="org.emonic.base.build.csant.Activator" localization="plugin" name="Csant Plug-in" project="emonic.base.build.csant" provider="Emonic.org"/>
+	<bundle bundleID="401" class="org.emonic.base.wizards.newformprojectwizard.Activator" localization="OSGI-INF/l10n/bundle" name="NewFormProjectWizard" project="org.emonic.base.wizards.NewFormProjectWizard"/>
+	<bundle bundleID="390" class="sharpdev.SharpdevPlugin" localization="OSGI-INF/l10n/bundle" name="SharpDev" project="sharpdev"/>
+	<bundle bundleID="393" class="org.emonic.base.build.ant.Activator" localization="OSGI-INF/l10n/bundle" name="Emonic Ant Plug-in" project="emonic.base.build.ant" provider="emonic.org"/>
+	<bundle bundleID="397" class="emonic.test.Activator" localization="plugin" name="Test Plug-in" project="emonic.test" provider="emonic.org"/>
+	<bundle bundleID="403" class="org.emonic.base.wizards.newprojectwizard.Activator" localization="OSGI-INF/l10n/bundle" name="NewProjectWizard" project="org.emonic.base.wizards.NewProjectWizard"/>
+	<bundle bundleID="407" class="org.emonic.debugger.DebuggerPlugin" localization="plugin" name="Emonic Debugger" project="org.emonic.debugger" provider="emonic.org">
+		<library name="emonicdebugger.jar"/>
+		<library name="axis.jar"/>
+		<library name="jaxrpc.jar"/>
+		<library name="commons-logging-1.0.4.jar"/>
+		<library name="commons-discovery-0.2.jar"/>
+		<library name="wsdl4j-1.5.1.jar"/>
+		<library name="saaj.jar"/>
+	</bundle>
+	<bundle bundleID="409" class="org.emonic.nunit.internal.core.Activator" localization="plugin" name="Emonic NUnit Support" project="org.emonic.nunit"/>
+	<bundle bundleID="395" class="org.emonic.base.build.msbuild.Activator" localization="OSGI-INF/l10n/bundle" name="MSBuild Plug-in" project="emonic.base.build.msbuild" provider="emonic.org"/>
+	<bundle bundleID="391" localization="plugin" name="%bundle.name" project="edu.arizona.cs.mbel2" provider="%bundle.vendor">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="402" class="org.emonic.base.wizards.newcsharplibraryprojectwizard.Activator" localization="OSGI-INF/l10n/bundle" name="NewLibraryProjectWizard" project="org.emonic.base.wizards.NewLibraryProjectWizard"/>
+	<bundle bundleID="396" class="org.emonic.base.build.nant.Activator" localization="plugin" name="Emonic Nant Plug-in" project="emonic.base.build.nant" provider="emonic.org"/>
+	<bundle bundleID="408" localization="OSGI-INF/l10n/bundle" name="Monodoc Plug-in" project="org.emonic.monodoc"/>
+	<bundle bundleID="404" class="org.emonic.debug.core.EmonicDebugCore" localization="OSGI-INF/l10n/bundle" name="Emonic Debug Core" project="org.emonic.debug.core" provider="emonic.org"/>
+	<bundle bundleID="400" class="org.emonic.base.wizards.newconsoleprojectwizard.Activator" localization="OSGI-INF/l10n/bundle" name="NewConsoleProjectWizard" project="org.emonic.base.wizards.NewConsoleProjectWizard"/>
+	<bundle bundleID="406" class="org.emonic.debug.ui.EmonicDebugUI" localization="OSGI-INF/l10n/bundle" name="Emonic Debug UI" project="org.emonic.debug.ui" provider="emonic.org"/>
+</map>

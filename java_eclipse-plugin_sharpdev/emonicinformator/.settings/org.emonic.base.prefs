@@ -1,0 +1,6 @@
+#Sat Sep 22 18:10:34 CEST 2007
+eclipse.preferences.version=1
+org.emonic.base.build.file=build-nant.xml
+org.emonic.base.build.mechanism=nant
+org.emonic.base.project.copyright=(c) Bernhard Brem, All rights reserved
+org.emonic.base.project.defaultNamespace=org.emonic.informator

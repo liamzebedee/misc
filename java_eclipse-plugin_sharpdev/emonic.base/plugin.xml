@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="documentation" name="Documentation" schema="schema/documentation.exsd"/>
+   <extension-point id="buildmechanism" name="BuildMechanism" schema="schema/buildmechanism.exsd"/>
+   <extension-point id="assemblyparser" name="AssemblyParser" schema="schema/assemblyparser.exsd"/>
+   <extension-point id="preferencescontributor" name="PreferencesContributor" schema="schema/preferencescontributor.exsd"/>
+   <!-- The csharp editor  itself-->
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.emonic.base.editors.CSharpEditor"
+            contributorClass="org.emonic.base.editors.CSharpEditorActionContributor"
+            default="true"
+            extensions="cs"
+            icon="icons/cscu_obj.gif"
+            id="org.emonic.base.editors.CSharpEditor"
+            name="C# Editor">
+      </editor>
+   </extension>
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="Emonic Build Editor"
+            extensions="xml,proj,csant,build"
+            icon="icons/emonic.gif"
+            contributorClass="org.emonic.base.buildmechanism.buildEditor.BuildEditorContributor"
+            class="org.emonic.base.buildmechanism.buildEditor.BuildEditor"
+            id="org.emonic.base.editors.buildEditor.BuildEditor">
+      </editor>
+   </extension>
+   <!-- Help system -->
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc/emonictoc.xml"
+            primary="true">
+      </toc>
+   </extension>
+   
+   <!-- The wizards --> 
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name=".NET"
+            id="emonic.dotNet">
+      </category>
+      <wizard
+            category="emonic.dotNet"
+            class="org.emonic.base.wizards.NewCSharpClassWizard"
+            icon="icons/newclass_wiz.gif"
+            id="org.emonic.base.wizards.newCSharpClassWizard"
+            name="C# Class"
+            project="false">
+      </wizard>
+      <wizard
+            name="C# Interface"
+            icon="icons/newint_wiz.gif"
+            category="emonic.dotNet"
+            project="false"
+            class="org.emonic.base.wizards.NewCSharpInterfaceWizard"
+            id="org.emonic.base.wizards.newCSharpInterfaceWizard">
+      </wizard>
+   </extension>
+   
+   <!-- The nature and buider definitions -->
+   <extension
+         id="EMonic_Nature"
+         name="EMonic_Nature"
+         point="org.eclipse.core.resources.natures">
+         <runtime>
+             <run
+                   class="org.emonic.base.natures.EMonoNature">
+             </run>
+         </runtime>
+       <builder
+            id="org.emonic.base.EMonic_Builder">
+      </builder>
+   </extension>
+   <extension
+        point="org.eclipse.ui.ide.projectNatureImages">
+     <image
+            icon="icons/emonicnature.gif"
+            natureId="org.emonic.base.EMonic_Nature"
+            id="org.emonic.base.natures.projectNatureImage">
+     </image>
+   </extension>
+   <extension
+         id="EMonic_Builder"
+         name="Emonic Auto Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="org.emonic.base.builders.EMonoBuilder">
+         </run>
+      </builder>
+    </extension>
+ 
+   <!-- Preferences and co -->
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name=".NET"
+            class="org.emonic.base.preferences.EMonoMainPreferencePage"
+            id="org.emonic.base.preferences.EMonoMainPreferencePage">
+      </page>
+      <page
+            category="org.emonic.base.preferences.EMonoBuildPreferencePage"
+            class="org.emonic.base.preferences.DotNetBuildPathPreferencePage"
+            id="org.emonic.base.preferences.dotNetBuildPathPreferencePage"
+            name="Build Path"/>
+      <page
+            category="org.emonic.base.preferences.EMonoMainPreferencePage"
+            class="org.emonic.base.preferences.EMonoBuildPreferencePage"
+            id="org.emonic.base.preferences.EMonoBuildPreferencePage"
+            name="Building"/>
+      <page
+            category="org.emonic.base.preferences.EMonoMainPreferencePage"
+            class="org.emonic.base.preferences.FrameworksPreferencePage"
+            id="org.emonic.base.preferences.frameworksPreferencePage"
+            name="Installed Frameworks"/>
+      <page
+            category="org.emonic.base.preferences.EMonoMainPreferencePage"
+            class="org.emonic.base.preferences.EMonicBinarySearchPreferencePage"
+            id="emonic.base.BinarySearchMechanismPage"
+            name="BinarySearchMechanism">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.emonic.base.preferences.CSharpPreferencePage"
+            id="org.emonic.base.preferences.cSharpPreferencePage"
+            name="C#">
+      </page>
+      <page
+            category="org.emonic.base.preferences.cSharpPreferencePage"
+            class="org.emonic.base.preferences.EMonoCSharpEditorPreferencePage"
+            id="org.emonic.base.preferences.EMonoEditorPreferencePage"
+            name="Editor"/>
+      <page
+            category="org.emonic.base.preferences.EMonoEditorPreferencePage"
+            class="org.emonic.base.preferences.CSharpTypingPreferencePage"
+            id="org.emonic.base.preferences.cSharpTypingPreferencePage"
+            name="Typing"/>
+      <page
+            category="org.emonic.base.preferences.EMonoEditorPreferencePage"
+            class="org.emonic.base.preferences.SyntaxColoringPreferencePage"
+            id="org.emonic.base.preferences.SyntaxColoringPreferencePage"
+            name="Syntax Coloring"/>
+      <page
+            category="org.emonic.base.preferences.cSharpPreferencePage"
+            class="org.emonic.base.preferences.EMonoCSharpCodeTemplatePreferencePage"
+            id="org.emonic.base.preferences.EmonoCSharpCodeTemplatePreferencePage"
+            name="Code Templates"/>
+      <page
+            category="org.emonic.base.preferences.cSharpPreferencePage"
+            class="org.emonic.base.preferences.EMonoTaskPreferencePage"
+            id="org.emonic.base.preferences.EMonoTaskPreferencePage"
+            name="Task Tags"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            objectClass="org.eclipse.core.resources.IProject"
+            name="Code Generation"
+            class="org.emonic.base.preferences.EMonoProjectPropertyPage"
+            id="org.emonic.base.preferences.EMonoProjectPropertyPage">
+            <filter
+               name="projectNature"
+               value="org.emonic.base.EMonic_Nature">
+           </filter>
+      </page>
+  </extension>
+ 
+  <!-- Commands for shortcuts -->
+  <extension
+        point="org.eclipse.ui.propertyPages">
+     <page
+           class="org.emonic.base.preferences.EMonoCodeCompletionProperty"
+           id="org.emonic.base.preferences.EMonoAdministrationProperty"
+           name="Code Completion"
+           objectClass="org.eclipse.core.resources.IProject">
+        <filter
+              name="projectNature"
+              value="org.emonic.base.EMonic_Nature"/>
+     </page>
+  </extension>
+  <extension point="org.eclipse.ui.commands">
+      <category
+            name="CSharp Source"
+            description="CSharp Source Actions"
+            id="org.emonic.editors.commands.source" />
+      <command
+            name="Toggle Comment"
+            description="Toggle Source Comment"
+            id="org.emonic.editors.commands.toggleComment"
+            categoryId="org.emonic.editors.commands.source" />
+      <command
+            name="Correct Indentation"
+            description="Correct Indentaiton Command"
+            id="org.emonic.editors.commands.correctIndentation"
+            categoryId="org.emonic.editors.commands.source" />
+	  <command
+            categoryId="org.emonic.editors.commands.source"
+            description="Search Declaration of the Code"
+            id="org.emonic.editors.commands.searchDeclarations"
+            name="Search Declarations"/>
+      <command
+            categoryId="org.emonic.editors.commands.source"
+            description="Open Declaration of the code"
+            id="org.emonic.editors.commands.openDeclaration"
+            name="Open Declaration"/>
+      <command
+            categoryId="org.emonic.editors.commands.source"
+            description="Search references of the code"
+            id="org.emonic.editors.commands.searchReferences"
+            name="Search References"/>
+      <command
+            categoryId="org.emonic.editors.commands.source"
+            description="Remove c#-file from build"
+            id="org.emonic.base.actions.CSharpRemoveFromBuildCommand"
+            name="CSharp Remove from build"/>
+      <command
+            categoryId="org.emonic.editors.commands.source"
+            description="Add csharp file to build"
+            id="org.emonic.base.actions.CSharpAddToBuildCommand"
+            name="CSharp Add To Build"/>
+      <command
+            name="Quick Outline"
+            description="Shows the Outline"
+            categoryId="org.emonic.editors.commands.source"
+            id="org.emonic.csharp.ui.edit.text.csharp.show.outline"/>
+   </extension>
+   <extension point="org.eclipse.ui.bindings">
+     <key
+            sequence="Ctrl+Shift+C"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.emonic.editors.csharpEditorScope"
+            commandId="org.emonic.editors.commands.toggleComment" />
+     <key
+            sequence="Ctrl+I"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.emonic.editors.csharpEditorScope"
+            commandId="org.emonic.editors.commands.correctIndentation" />     
+	 <key
+            commandId="org.emonic.editors.commands.searchDeclarations"
+            contextId="org.emonic.editors.csharpEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+G"/>
+     <key
+            commandId="org.emonic.editors.commands.openDeclaration"
+            contextId="org.emonic.editors.csharpEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="F3"/>
+     <key
+           commandId="org.emonic.editors.commands.searchReferences"
+           contextId="org.emonic.editors.csharpEditorScope"
+           schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+           sequence="Ctrl+Shift+G"/>
+      <key
+            sequence="M1+O"
+            contextId="org.emonic.editors.csharpEditorScope"
+            commandId="org.emonic.csharp.ui.edit.text.csharp.show.outline"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>  
+     </extension> 
+     <extension point="org.eclipse.ui.contexts">
+        <context
+            name="Editing CSharp Source"
+            description="Editing CSharp Source Code Context"
+            id="org.emonic.editors.csharpEditorScope"
+            parentId="org.eclipse.ui.textEditorScope" />
+   </extension>
+ 
+  <!-- Menues -->
+  <extension point="org.eclipse.ui.popupMenus">   
+  <viewerContribution       
+        id="org.emonic.base.actions.CSharpPopupMenue" 
+        targetID="#CSharpEditorContext"> 
+        <action
+           id="org.emonic.base.actions.CSharpRemoveFromBuildAction" 
+           label="Remove from build file"
+           icon="icons/red_minus.gif"
+           menubarPath="additions" 
+           class="org.emonic.base.actions.CSharpRemoveFromBuildAction"> 
+        </action>  
+        <action
+            id="org.emonic.base.actions.CSharpAddToBuildAction" 
+            label="Add to build file"
+            icon="icons/green_plus.gif"
+            menubarPath="additions" 
+            class="org.emonic.base.actions.CSharpAddToBuildAction"> 
+        </action>
+       <action
+             class="org.emonic.base.actions.DefaultCSharpSourceDelegate"
+             definitionId="org.emonic.editors.commands.correctIndentation"
+             id="org.emonic.editors.actions.correctIndentationAction"
+             label="Correct Indentation"
+             menubarPath="additions"
+             >
+       </action> 
+        <action
+                definitionId="org.emonic.editors.commands.toggleComment"
+                label="Toggle Comment"
+                class="org.emonic.base.actions.DefaultCSharpSourceDelegate"
+                menubarPath="additions"
+                id="org.emonic.editors.actions.ToggleCommentAction">
+       </action>
+       <action
+             class="org.emonic.base.actions.DefaultCSharpSourceDelegate"
+             definitionId="org.emonic.editors.commands.openDeclaration"
+             id="org.emonic.editors.actions.OpenDeclarationsAction"
+             label="Open Declaration"
+             menubarPath="additions"/>
+       <action
+             class="org.emonic.base.actions.DefaultCSharpSourceDelegate"
+             definitionId="org.emonic.editors.commands.searchDeclarations"
+             id="org.emonic.editors.actions.SearchDeclarationsAction"
+             label="Search Declaration"
+             menubarPath="additions"/>
+       <action
+             class="org.emonic.base.actions.DefaultCSharpSourceDelegate"
+             definitionId="org.emonic.editors.commands.searchReferences"
+             id="org.emonic.editors.actions.SearchReferencesAction"
+             label="Search References"
+             menubarPath="additions"/>
+       <action
+             class="org.emonic.base.actions.DefaultCSharpSourceDelegate"
+             definitionId="org.emonic.editors.commands.quickOutline"
+             id="org.emonic.editors.actions.quickOutlineAction"
+             label="Quick Outline"
+             menubarPath="additions"/>
+    </viewerContribution>
+  	<!-- Popup-meue in the resource view --> 
+    <objectContribution 
+       id="emonic.base.actions.CSharpAddToBuildAction.popup.object"
+       objectClass="org.eclipse.core.resources.IFile"
+       nameFilter="*.cs">
+      <filter
+         name="projectNature"
+         value="org.emonic.base.EMonic_Nature">
+      </filter>
+      <action
+         id="emonic.base.actions.CSharpAddToBuildAction.object.action1" 
+         label="Add to build file"
+         icon="icons/green_plus.gif"
+         menubarPath="additions" 
+         class="org.emonic.base.actions.CSharpAddToBuildAction"> 
+       </action> 
+       <action
+         id="org.emonic.base.actions.CSharpRemoveFromBuild.object.action1" 
+         label="Remove from build file"
+         icon="icons/red_minus.gif"
+         menubarPath="additions" 
+        class="org.emonic.base.actions.CSharpRemoveFromBuildAction"/>
+     </objectContribution>
+    <viewerContribution
+          id="org.emonic.base.RulerPopupActions"
+          targetID="#TextRulerContext">
+       <action
+             class="org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate"
+             id="org.emonic.base.rulerContextMenu.toggleBreakpointAction"
+             label="Toggle Breakpoint"
+             menubarPath="debug">
+       </action>
+       <action
+             class="org.eclipse.debug.ui.actions.RulerEnableDisableBreakpointActionDelegate"
+             id="org.emonic.base.rulerContextMenu.enableDisableBreakpointAction"
+             label="%EnableBreakpoint.label"
+             menubarPath="debug">
+       </action>
+    </viewerContribution> 
+   </extension>
+   
+   <!-- Action set for the top menue -->
+   <extension point="org.eclipse.ui.actionSets">  
+     <actionSet
+      label="Emonic Source Actions"
+      description="Emonic Source Actions"
+      id="org.emonic.editors.actionSet.coding"
+              visible="false">
+       <menu
+                id="org.emonic.editors.topLevelMenu.source"
+                label="Source"
+                path="edit">
+                <separator name="editGroup" />
+                <separator name="additions"/>
+            </menu>       
+       <action
+            definitionId="org.emonic.editors.commands.toggleComment"
+            label="Toggle Comment"
+            retarget="true"
+            menubarPath="org.emonic.editors.topLevelMenu.source/editGroup"
+            id="org.emonic.editors.actions.ToggleCommentAction">
+        </action>
+        <action
+            definitionId="org.emonic.editors.commands.correctIndentation"
+            label="Correct Indentation"
+            retarget="true"
+            menubarPath="org.emonic.editors.topLevelMenu.source/editGroup"
+            id="org.emonic.editors.actions.correctIndentationAction">
+        </action>
+	  </actionSet>
+      <actionSet
+            label="New Wizard Action Set"
+            visible="false"
+            id="org.emonic.ui.csharpElementCreationActionSet">
+         <action
+               class="org.emonic.base.actions.NewCSharpTypeActionDelegate"
+               icon="icons/newclass_wiz.gif"
+               id="org.emonic.ui.actions.newCSharpTypeDropDown"
+               label="New C# Class"
+               style="pulldown"
+               toolbarPath="Normal/CSharpWizards"
+               tooltip="New C# Class">
+         </action>
+      </actionSet>
+  </extension>
+  <extension point="org.eclipse.ui.actionSetPartAssociations">
+        <actionSetPartAssociation targetID="org.emonic.editors.actionSet.coding">
+            <part id="org.emonic.base.editors.CSharpEditor" />
+        </actionSetPartAssociation>
+   </extension>
+   <!--extension point="org.eclipse.ui.popupMenus"> 
+   <objectContribution 
+      id="org.emonic.base.actions.CSharpRemoveFromBuild.popup.object"
+      objectClass="org.eclipse.core.resources.IFile"
+      nameFilter="*.cs">
+      <filter
+         name="projectNature"
+         value="org.emonic.base.EMonic_Nature">
+      </filter>
+     <action
+         id="org.emonic.base.actions.CSharpRemoveFromBuild.object.action1" 
+         label="Remove from build file"
+         icon="icons/red_minus.gif"
+         menubarPath="additions" 
+        class="org.emonic.base.actions.CSharpRemoveFromBuildAction"/> 
+   </objectContribution> 
+  </extension-->
+  
+  <!-- Problem Marker -->
+  <extension
+        id="parserErrorMarker"
+        name="Parser Errors/Warnings"
+        point="org.eclipse.core.resources.markers">
+     <super type="org.eclipse.core.resources.problemmarker"/>
+     <persistent value="true"/>
+  </extension>
+  <extension
+       id="compilerErrorMarker"
+       name="Compiler Errors/Warnings"
+       point="org.eclipse.core.resources.markers">
+    <super type="org.eclipse.core.resources.problemmarker"/>
+    <persistent value="true"/>
+  </extension>
+  <extension
+        point="org.eclipse.ui.perspectives">
+     <perspective
+           class="org.emonic.base.perspective.PerspectiveFactory"
+           icon="icons/emonic.gif"
+           id="org.emonic.base.emonicperspective"
+           name=".NET"/>
+  </extension>
+  <extension
+        id="declarationmarker"
+        name="emonic declaration markers"
+        point="org.eclipse.core.resources.markers">
+     <super type="org.eclipse.core.resources.textmarker"/>
+  </extension>
+  <extension
+        id="CodeQueryResultView"
+        point="org.eclipse.search.searchResultViewPages">
+     <viewPage
+           class="org.emonic.base.search.CodeQueryResultPage"
+           id="org.emonic.base.search.CodeQueryResultPage"
+           searchResultClass="org.emonic.base.search.CodeQueryResult"/>
+   </extension>
+  <extension
+        point="org.eclipse.core.runtime.contentTypes">
+     <content-type
+           file-extensions="exe"
+           id="dotNetExecutable"
+           name=".NET Executable"
+           priority="high">
+     </content-type>
+     <content-type
+           file-extensions="cs"
+			base-type="org.eclipse.core.runtime.text"
+           id="cSharpSource"
+           name="C# Source"
+           priority="high">
+     </content-type>
+  </extension>
+  <extension
+        point="org.eclipse.ui.navigator.navigatorContent">
+     <navigatorContent
+           activeByDefault="true"
+           contentProvider="org.emonic.base.views.NavigatorSourceElementContentProvider"
+           id="org.emonic.base.navigator.csharpContent"
+           labelProvider="org.emonic.base.views.NavigatorSourceElementLabelProvider"
+           name="C# Type Outline"
+           priority="normal">
+        <triggerPoints>
+           <or>
+              <and>
+                 <instanceof value="org.eclipse.core.resources.IResource"/>
+                 <test
+                       forcePluginActivation="true"
+                       property="org.eclipse.core.resources.extension"
+                       value="dll"/>
+              </and>
+              <and>
+                 <instanceof value="org.eclipse.core.resources.IResource"/>
+                 <test
+                       forcePluginActivation="true"
+                       property="org.eclipse.core.resources.extension"
+                       value="cs"/>
+              </and>
+               <instanceof value="org.emonic.base.codehierarchy.IDotNetElement"/>
+           </or>
+        </triggerPoints>
+         <possibleChildren>
+            <or>
+               <instanceof value="org.emonic.base.codehierarchy.IDotNetElement"/>
+            </or>
+         </possibleChildren>
+     <actionProvider
+           class="org.emonic.base.views.DotNetElementActionProvider"
+           id="org.emonic.base.views.dotNetElementActionProvider"/>
+     <commonWizard
+           type="new"
+           wizardId="org.emonic.base.wizards.EmonoNewProjectResourceWizard">
+        <enablement>
+           <adapt
+                 type="org.eclipse.core.resources.IResource">
+           </adapt></enablement>
+     </commonWizard>
+     <commonWizard
+           type="new"
+           wizardId="org.emonic.base.wizards.newCSharpInterfaceWizard">
+        <enablement>
+           <adapt
+                 type="org.eclipse.core.resources.IResource">
+           </adapt></enablement>
+     </commonWizard>
+     <commonWizard
+           type="new"
+           wizardId="org.emonic.base.wizards.newCSharpClassWizard">
+        <enablement>
+           <adapt
+                 type="org.eclipse.core.resources.IResource">
+           </adapt></enablement>
+     </commonWizard>
+     </navigatorContent>
+  </extension>
+  <extension
+        point="org.eclipse.ui.navigator.viewer">
+     <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+        <includes>
+           <contentExtension pattern="org.emonic.base.navigator.csharpContent"/>
+        </includes>
+     </viewerContentBinding>
+  </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name=".NET"
+            id="org.emonic.ui">
+      </category>
+      <view
+            name="Object Browser"
+            icon="icons/sample.gif"
+            category="org.emonic.ui"
+            class="org.emonic.base.views.ObjectBrowserView"
+            id="org.emonic.base.views.objectBrowser"/>
+   </extension>
+   <extension
+         point="org.emonic.base.documentation">
+      <parser
+            class="org.emonic.base.documentation.XMLDocumentationParser">
+      </parser>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editorActions">
+      <editorContribution
+            id="org.emonic.base.rulerActions"
+            targetID="org.emonic.base.editors.CSharpEditor">
+         <action
+               actionID="RulerDoubleClick"
+               class="org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate"
+               id="org.emonic.base.toggleBreakpointAction"
+               label="Not Used"
+               style="push">
+         </action>
+      </editorContribution>
+   </extension>
+</plugin>

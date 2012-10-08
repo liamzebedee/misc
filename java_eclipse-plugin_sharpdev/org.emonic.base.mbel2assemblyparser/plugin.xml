@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="org.emonic.base.mbel2assemblyparser"
+         name="org.emonic.base.mbel2assemblyparser"
+         point="org.emonic.base.assemblyparser">
+      <parser
+            ID="org.emonic.base.mbel2assemblyparser.parser1"
+            class="org.emonic.base.mbel2assemblyparser.MBel2AssemblyParser">
+      </parser>
+   </extension>
+   <extension
+         point="org.emonic.base.preferencescontributor">
+      <preferencesContributor
+            PreferencePageClassName="org.emonic.base.preferences.EMonicBinarySearchPreferencePage"
+            class="org.emonic.base.mbel2assemblyparser.MBel2PreferencesInjector">
+      </preferencesContributor>
+   </extension>
+
+</plugin>

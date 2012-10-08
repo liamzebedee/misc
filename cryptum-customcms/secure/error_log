@@ -1,0 +1,331 @@
+[14-Feb-2011 03:25:18] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:19] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:21] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:21] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:23] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:25] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:27] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:29] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:31] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:36] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:38] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:38] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:25:39] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 97
+[14-Feb-2011 03:30:30] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:32] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:33] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:35] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:38] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:39] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:41] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:43] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:46] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:48] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:30:49] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 3
+[14-Feb-2011 03:34:41] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 03:34:43] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 03:34:45] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 03:34:47] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 03:34:47] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 03:34:49] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 03:34:51] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 03:34:53] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/channel.php on line 4
+[14-Feb-2011 04:07:44] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/cryptum1/public_html/secure/channela.php on line 45
+[14-Feb-2011 04:08:07] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/cryptum1/public_html/secure/channela.php on line 45
+[16-Feb-2011 19:10:19] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[16-Feb-2011 19:10:19] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[16-Feb-2011 19:11:46] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[16-Feb-2011 19:11:46] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[16-Feb-2011 19:12:48] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[16-Feb-2011 19:12:48] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[16-Feb-2011 19:12:48] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[16-Feb-2011 19:12:48] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:4) in /home/cryptum1/public_html/secure/channela.php on line 46
+[27-Feb-2011 04:23:23] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[27-Feb-2011 04:23:23] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 22:19:02] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:02] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:02] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:03] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:04] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:04] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:05] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:05] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:05] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:06] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:07] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:07] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:07] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:07] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:08] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:08] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:09] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:09] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:09] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:10] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:10] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:11] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:11] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:11] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:11] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:12] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:12] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:12] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:13] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:13] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:13] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:14] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:14] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:14] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:14] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:15] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:16] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:16] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:16] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:16] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:16] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:18] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:18] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:18] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:18] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:18] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:20] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:20] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:20] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:22] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:22] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:22] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:22] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:22] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:24] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:24] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:24] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:25] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:26] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:28] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:28] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:28] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:28] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:29] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:29] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:30] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:30] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:30] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:30] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:30] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:32] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:32] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:32] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:32] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:34] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:34] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:34] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:34] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:36] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:36] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:36] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:38] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:38] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:38] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:40] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:41] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:41] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:42] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:42] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:42] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:44] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:44] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:44] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:46] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:46] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:46] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:48] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:48] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:48] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:50] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:50] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:50] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:50] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:52] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:52] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:52] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:54] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:54] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:54] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:55] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:55] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:56] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:19:56] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/cryptum1/public_html/secure/channel.php on line 56
+[10-Mar-2011 22:54:45] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 49
+[10-Mar-2011 22:59:58] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 22:59:58] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:00:02] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/cryptum1/public_html/secure/channel.php on line 53
+[10-Mar-2011 23:00:09] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:00:09] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:01:00] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:01:00] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:01:15] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:01:15] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:01:37] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:01:37] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:03:55] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:04:04] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[10-Mar-2011 23:05:23] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 46
+[11-Mar-2011 00:13:47] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[11-Mar-2011 00:13:47] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[11-Mar-2011 20:06:55] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[11-Mar-2011 20:06:55] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:49:53] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:49:53] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:13] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:13] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:24] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:24] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:34] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:34] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:43] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:43] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:44] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:44] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:50] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:50:50] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:51:00] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 17:51:00] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 18:21:53] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[13-Mar-2011 18:21:53] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[14-Mar-2011 18:12:07] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[14-Mar-2011 18:12:07] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[23-Mar-2011 18:04:28] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[23-Mar-2011 18:04:28] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[26-Mar-2011 02:03:12] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/cryptum1/public_html/secure/channela.php:3) in /home/cryptum1/public_html/secure/channela.php on line 47
+[11-Apr-2011 21:01:36] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/set.php on line 8
+[11-Apr-2011 21:17:09] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/set.php on line 8
+[11-Apr-2011 21:31:53] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/set.php on line 8
+[11-Apr-2011 21:32:17] PHP Parse error:  syntax error, unexpected '<' in /home/cryptum1/public_html/secure/set.php on line 8
+[11-Apr-2011 21:34:59] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 49
+[12-Apr-2011 04:50:57] PHP Fatal error:  Cannot redeclare encrypt() (previously declared in /home/cryptum1/public_html/secure/channel.php:10) in /home/cryptum1/public_html/secure/channel.php on line 77
+[12-Apr-2011 04:51:00] PHP Fatal error:  Cannot redeclare encrypt() (previously declared in /home/cryptum1/public_html/secure/channel.php:10) in /home/cryptum1/public_html/secure/channel.php on line 77
+[12-Apr-2011 04:51:23] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:40] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:41] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:43] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:44] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:46] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:47] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:49] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:50] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:52] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:53] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:55] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:56] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:58] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:51:59] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:52:01] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:52:02] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:52:04] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:52:05] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:52:07] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 84
+[12-Apr-2011 04:52:08] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:09] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:11] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:12] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:14] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:15] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:17] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:18] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:20] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:21] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:23] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:24] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:26] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:28] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:29] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:31] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:32] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:33] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:35] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:36] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:38] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:39] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:41] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:43] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:44] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:46] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:47] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:49] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:50] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:52] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:52] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:52:52] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:52:59] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:53:01] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:53:01] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:53:08] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:55:08] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:55:30] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:55:38] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:55:38] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:55:42] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:55:42] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:56:12] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:56:12] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 04:56:14] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 46
+[12-Apr-2011 04:56:14] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:49] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:51] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:52] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:54] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:55] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:56] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:58] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:04:59] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:01] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:02] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:04] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:05] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:07] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:08] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:10] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:05:11] PHP Parse error:  syntax error, unexpected ';' in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:10:48] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 45
+[12-Apr-2011 05:10:48] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 80
+[12-Apr-2011 05:10:48] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 81
+[12-Apr-2011 05:10:51] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/cryptum1/public_html/secure/channel.php on line 45
+[12-Apr-2011 05:13:00] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:02] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:03] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:05] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:06] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:08] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:09] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:11] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:12] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:14] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:15] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:17] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:19] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:20] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:22] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:23] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:25] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:26] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:28] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:29] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:31] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:32] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:34] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:35] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:37] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:38] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 05:13:40] PHP Fatal error:  Call to undefined function  decrypt() in /home/cryptum1/public_html/secure/channel.php on line 29
+[12-Apr-2011 20:41:20] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 87
+[12-Apr-2011 20:50:55] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:51:31] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:51:46] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:51:56] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:52:03] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:52:04] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:52:10] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:52:13] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:52:13] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:52:16] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89
+[12-Apr-2011 20:52:27] PHP Parse error:  syntax error, unexpected $end in /home/cryptum1/public_html/secure/channela.php on line 89

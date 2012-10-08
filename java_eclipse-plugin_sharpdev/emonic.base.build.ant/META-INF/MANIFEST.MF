@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Emonic Ant Plug-in
+Bundle-SymbolicName: org.emonic.base.build.ant; singleton:=true
+Bundle-Version: 0.4.1
+Bundle-Activator: org.emonic.base.build.ant.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Import-Package: org.eclipse.ant.core,
+ org.eclipse.ui.console,
+ org.emonic.base.buildmechanism
+Bundle-Vendor: emonic.org

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         id="NAntBuildMech"
+         name="NAntNAntBuildMechanism"
+         point="org.emonic.base.buildmechanism">
+      <builder
+            ID="emonic.base.build.antnant.AntBuilder"
+            class="org.emonic.base.build.nant.nant.NAntBuildfileManipulator"
+            mechanism="nant"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.emonic.base.preferences.EMonoBuildPreferencePage"
+            class="org.emonic.base.build.nant.preferences.EMonoNantPreferencePage"
+            id="emonic.base.build.antnant.preferences.EMonoAntNantPreferencePage"
+            name="Nant">
+      </page>
+   </extension>
+
+</plugin>

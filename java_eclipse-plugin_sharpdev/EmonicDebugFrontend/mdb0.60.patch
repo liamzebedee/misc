@@ -1,0 +1,10 @@
+--- mdb-0.60-orig/frontend/Interpreter.cs	2007-12-14 21:48:27.000000000 +0100
++++ mdb-0.60-emonic/frontend/Interpreter.cs	2008-02-05 11:10:25.000000000 +0100
+@@ -97,6 +97,7 @@
+ 
+ 		public DebuggerEngine DebuggerEngine {
+ 			get { return engine; }
++			set { engine = value; }
+ 		}
+ 
+ 		public SourceFileFactory SourceFileFactory {
