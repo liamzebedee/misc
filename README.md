@@ -11,3 +11,4 @@ WARNING: THIS CODE IS EVIDENT OF MY DEVELOPMENT AND LEARNING. IT IS SOME OF THE 
 * [cryptum-metro/](misc/tree/master/cryptum-metro/) - UNFINISHED simplistic Wordpess theme with a lot of design concepts taken from Windows 8 Metro UI
 * [python-p2p-scrape/](misc/tree/master/python-p2p-scrape/) - A Google intolerant script I wrote to scrape academic papers from IEEE website and then try download them by searching Google for the appropriate title
 * [java_eclipse-plugin_sharpdev/](misc/tree/master/java_eclipse-plugin_sharpdev/) - A semi-working port of the SharpDev (enables people to code in C# in Eclipse + Mono) to Mono/.NET 4.0
+* [gimg](misc/tree/master/gimg/) - An Anki addon to automate the retrieval of relevant images into a productive flashcard
