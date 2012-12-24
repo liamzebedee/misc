@@ -138,8 +138,7 @@ def google_images(query, callback):
 	opener = urllib2.build_opener()
 	opener.addheaders = [('Accept Language', 'en-GB,en-US;q=0.8,en;q=0.6'), ('User-agent', 'Mozilla/5.0')]
 	
-	# Clean the query - remove all slashes, and escape the rest
-	queryClean = urllib.quote(query.replace('/', ''), safe="%:=&?~#+!$,;'@()*[]")
+	queryClean = "".join(x for x in query if x.isalnum())
 	page = opener.open("http://www.google.com/search?tbm=isch&q=" + queryClean)
 	
 	soup = BeautifulSoup(page.read())
