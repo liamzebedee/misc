@@ -8,4 +8,7 @@ When adding a card, a button should be shown titled "Load image". After typing t
 
 When reviewing, if you don't know what an image represents, hover over it to read the title.
 
-When searching for cards, simply type in the title.  
+When searching for cards, simply type in the title.
+
+## Install
+Download gimg.py and place it in Anki/addons
