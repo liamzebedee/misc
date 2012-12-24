@@ -88,6 +88,9 @@ class imageLoaderDialog(QDialog):
 		google_images(getTextFromHTML(front), imgCallback)
 	
 	def selectImage(self, label):
+		# focus on front of note
+		self.parent.editor.currentField = 0
+		
 		title = getTextFromHTML(self.parent.editor.note['Front'])
 		self.parent.editor.note['Front'] = ""
 		self.parent.editor.loadNote()
@@ -130,11 +133,14 @@ def openImageLoaderDialog():
 	dialog.load_images()
 
 def google_images(query, callback):
+	# NOTE: Google returns a different table-based page structure when using urllib with the above user agent.
+	#		Keep this in mind when editing the scraper.
 	opener = urllib2.build_opener()
 	opener.addheaders = [('Accept Language', 'en-GB,en-US;q=0.8,en;q=0.6'), ('User-agent', 'Mozilla/5.0')]
-	# NOTE: Google returns a different table-based page structure when using urllib with the above user agent.
-	#		Keep this in mind if editing the scraper. 
-	page = opener.open(urllib.quote("http://www.google.com/search?tbm=isch&q="+query, safe="%/:=&?~#+!$,;'@()*[]"))
+	
+	# Clean the query - remove all slashes, and escape the rest
+	queryClean = urllib.quote(query.replace('/', ''), safe="%:=&?~#+!$,;'@()*[]")
+	page = opener.open("http://www.google.com/search?tbm=isch&q=" + queryClean)
 	
 	soup = BeautifulSoup(page.read())
 	g_image_table = soup.find("table", { "class": "images_table" } )
@@ -143,7 +149,7 @@ def google_images(query, callback):
 	for image in images:
 		imgThumbnailData = urllib2.urlopen(image['src']).read()
 		
-		imgFile = tempfile.NamedTemporaryFile(suffix=".jpg")
+		imgFile = tempfile.NamedTemporaryFile(prefix=queryClean, suffix=".jpg")
 		imgFile.seek(0)
 		imgFile.write(imgThumbnailData)
 		imgFile.flush()
