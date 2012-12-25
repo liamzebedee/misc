@@ -9,19 +9,19 @@ images from Google relevant to the card front.
 Requires pip package 'beautifulsoup4'. 
 """
 
-import types
 from aqt import *
 from aqt.qt import *
 from aqt.utils import shortcut, showInfo
 from aqt.addcards import AddCards
 from anki.hooks import wrap
 from bs4 import BeautifulSoup
+from PyQt4.QtGui import *
+from PyQt4.QtCore import *
+import types
 import urllib
 import urllib2
 import tempfile
 import sys
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
 
 def getTextFromHTML(html):
 	if html is None: return
@@ -37,6 +37,7 @@ class ClickableImage(QLabel):
 		self.emit(SIGNAL('clicked'), self)
 		
 	def close(self):
+		print("Widget is closing imgFile")
 		self.imgFile.close()
 
 def addLoadImageBtn(self):
@@ -73,19 +74,38 @@ class imageLoaderDialog(QDialog):
 		scroll.setWidget(scrollContents)
 		self.layout = QVBoxLayout(scrollContents)
 		
-	def load_images(self):
-		front = self.parent.editor.note['Front']
+	def loadImages(self):
+		query = getTextFromHTML(self.parent.editor.note['Front'])
+		query = "".join(x for x in query if x.isalnum())
+				
+		# NOTE: Google returns a different table-based page structure when using urllib with the above user agent.
+		#		Keep this in mind when editing the scraper.
+		opener = urllib2.build_opener()
+		opener.addheaders = [('Accept Language', 'en-GB,en-US;q=0.8,en;q=0.6'), ('User-agent', 'Mozilla/5.0')]
+
+		try:
+			page = opener.open("http://www.google.com/search?tbm=isch&q=" + query)
+		except:
+			# TODO print error msg
+			self.close()
+			showInfo("Error downloading images")
+			return
 		
-		def imgCallback(imgFile):
+		imageContainer = BeautifulSoup(page.read()).find("table", { "class": "images_table" } )
+		images = imageContainer.findAll("img", limit = 15)
+
+		for image in images:
+			imgFile = tempfile.NamedTemporaryFile(prefix=queryClean, suffix=".jpg")
+			imgFile.seek(0)
+			imgFile.write(urllib2.urlopen(image['src']).read())
+			imgFile.flush()
+	
 			imgWidget = ClickableImage(imgFile)
-			#self.destroyed.connect(imgWidget.close) XXX: not working
-			#mw.connect(self, SIGNAL("destroyed"), imgWidget.close)
+			#self.destroyed.connect(imgWidget.close) # XXX: not working
+			#mw.connect(self, SIGNAL("close"), imgWidget.close)
 			mw.connect(imgWidget, SIGNAL("clicked"), self.selectImage)
 			self.layout.addWidget(imgWidget)
 			imgWidget.show()
-	
-		# Load images
-		google_images(getTextFromHTML(front), imgCallback)
 	
 	def selectImage(self, label):
 		# focus on front of note
@@ -96,7 +116,7 @@ class imageLoaderDialog(QDialog):
 		self.parent.editor.loadNote()
 		
 		# Add image
-		self.parent.editor.addMedia(label.imgFile.name, canDelete=True)
+		self.parent.editor.addMedia(label.imgFile.name)
 		
 		# Get image and apply title/alt
 		soup = BeautifulSoup(self.parent.editor.note['Front'])
@@ -107,7 +127,7 @@ class imageLoaderDialog(QDialog):
 		self.parent.editor.loadNote()
 		
 		self.close()
-	
+		
 	# TODO more idiomatic cleanup with signals etc.	
 	def closeEvent(self, event):
 		for i in xrange(self.layout.count()):
@@ -118,7 +138,6 @@ class imageLoaderDialog(QDialog):
 					widget.close()
 				except:
 					pass
-		
 
 def openImageLoaderDialog():
 	parentWindow = aqt.mw.app.activeWindow() or aqt.mw # editor window	
@@ -130,27 +149,4 @@ def openImageLoaderDialog():
 	dialog.setModal(True)
 	dialog.show()
 	# TODO load images after window shows
-	dialog.load_images()
-
-def google_images(query, callback):
-	# NOTE: Google returns a different table-based page structure when using urllib with the above user agent.
-	#		Keep this in mind when editing the scraper.
-	opener = urllib2.build_opener()
-	opener.addheaders = [('Accept Language', 'en-GB,en-US;q=0.8,en;q=0.6'), ('User-agent', 'Mozilla/5.0')]
-	
-	queryClean = "".join(x for x in query if x.isalnum())
-	page = opener.open("http://www.google.com/search?tbm=isch&q=" + queryClean)
-	
-	soup = BeautifulSoup(page.read())
-	g_image_table = soup.find("table", { "class": "images_table" } )
-	images = g_image_table.findAll("img", limit = 15)
-	
-	for image in images:
-		imgThumbnailData = urllib2.urlopen(image['src']).read()
-		
-		imgFile = tempfile.NamedTemporaryFile(prefix=queryClean, suffix=".jpg")
-		imgFile.seek(0)
-		imgFile.write(imgThumbnailData)
-		imgFile.flush()
-		
-		callback(imgFile)
+	dialog.loadImages()
