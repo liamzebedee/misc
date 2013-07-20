@@ -1,0 +1,362 @@
+/*
+Theme Name: Cryptum
+Theme URI: http://cryptum.net/theme/
+Author: liamzebedee
+Author URI: http://cryptum.net/
+Description: A minimalistic theme designed for Cryptum.NET
+Version: 1.0.6
+License: GNU General Public License
+License URI: license.txt
+Tags: minimalistic
+
+Based on the _s (underscores.me) theme.
+*/
+/*
+Changelog:
+1.0.6:
+- Fixed some padding with ez_cc_license_block (plugin)
+- Made .entry-content font more pleasing
+- Removed fitText dependency and changed font styling for blog
+- Changed highlight colour
+
+1.0.5:
+- Removed some redundant code
+
+1.0.4:
+- Moved styling over to Bootstrap framework
+
+1.0.3:
+- Removed border-radius on homepage
+- Fixed entry-content width on posts and pages
+- Added link to post thumbnail on posts
+
+1.0.2:
+- Removed title functionality in favour of the SEO Ultimate plugin's 'Titles' module 
+- Fixed bug with tag and category styling
+- Removed code for loading small menu script
+
+1.0.1:
+- Changed width on the content of pages and posts to 75%
+- Fixed page titles.
+- Highlighted current menu item
+*/
+@import url("css/bootstrap.min.css");
+@import url("layout.css");
+
+/* =Global
+----------------------------------------------- */
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+
+/* =Menu
+----------------------------------------------- */
+#page #masthead .main-navigation .site-info {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#page #masthead .main-navigation {
+	border-bottom: 1px solid #AAA;
+}
+
+#page #masthead .main-navigation #menu-main {
+	float: right;
+	margin-top: 4%;
+}
+
+#page #masthead .site-title {
+	text-transform: none;
+}
+
+#page #masthead .site-description {
+	display: block;
+}
+
+#page #masthead .main-navigation #menu-main {
+	width: 100%;
+	text-align: right;
+}
+
+.main-navigation li {
+	list-style: none;
+	display: inline-block;
+	font-size: 115%;
+	padding-left: 1em;
+}
+
+.main-navigation a {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #4E4E4E;
+	border: none;
+	text-decoration: none;
+}
+.main-navigation a:visited {
+	color: #4E4E4E;
+}
+.main-navigation a:hover,
+.main-navigation a:focus,
+.main-navigation a:active {
+	color: #0080ff;
+	background-color: white !important;
+}
+
+/* =Index and Archives
+----------------------------------------------- */
+.blog #content, 
+.archive #content {
+	margin-top: 1em;
+}
+
+.blog #content .post,
+.archive #content .post {
+	width: 300px;
+	height: 170px;
+	margin: 0 20px 20px 0;
+	display: inline-block;
+	position: relative;
+	color: #d7d7d7;
+	background: #333;
+	
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.blog #content .post a,
+.archive #content .post a {
+	text-decoration: none;
+}
+
+.blog #content .post .entry-thumbnail,
+.archive #content .post .entry-thumbnail {
+	height: 100%;
+	text-align: center;
+	
+	-moz-opacity: 0.6;
+	-khtml-opacity: 0.6;  
+	opacity: 0.6;
+	
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
+}
+
+.blog #content .post .entry-title, 
+.archive #content .post .entry-title {
+	line-height: 33px;
+	color: white;
+	font-family: Helvetica, Sans-Serif;
+	margin-top: 0;
+	letter-spacing: -0.05em;
+	width: 100%;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	top: 0;
+	position: absolute;
+	font-size: 180%;
+}
+
+/* =Entry
+----------------------------------------------- */
+
+.entry-title {
+	font-weight: bold;
+	color: #4E4E4E;
+}
+
+.entry-meta {
+	color: #757575;
+	margin-bottom: 1em;
+}
+
+.entry-meta a {
+	color: #757575;
+}
+
+.entry-content {
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.entry-content p {
+	margin-bottom: 1em;
+}
+
+.entry-content .ez_cc_license_block {
+	margin-top: 5em;
+}
+
+/* =Comments
+----------------------------------------------- */
+#comments {
+	margin-top:  3em;
+}
+
+.commentlist {
+	border-left: 1px solid lightGrey;
+	padding-left: 10px;
+}
+
+.commentlist,
+.comment .children {
+	list-style: none;
+}
+
+li .comment {
+	margin-top: 5px;
+}
+
+.comment-single {
+	width: 75%;
+}
+
+.comment .comment-author {
+	float: left;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.comment .avatar {
+	float: left;
+	margin-right: 1%; /* We are the 1%. This marginalization must stop! */
+}
+
+.comment .reply {
+	font-size: 0.8em;
+}
+
+.comment .comment-meta {
+	margin-left: 3%;
+	font-size: 0.7em;
+	color: grey;
+	display: inline;
+	vertical-align: middle;
+}
+
+.comment .comment-content {
+	clear: both;
+	font-size: 0.9em;
+}
+
+.comment .comment-content p:last-child {
+	margin: 0;
+}
+
+.comments-title {
+	font: normal normal 700 25px Arial;
+}
+
+.comments-tip {
+	margin: 0;
+	font-size: 15px;
+	color: grey;
+}
+
+.comment-single {
+	margin-bottom: 1%;
+}
+
+#respond {
+	margin-top: 1.5em;
+}
+
+#respond #reply-title {
+	font: normal normal 700 25px Arial;
+}
+
+#respond #commentform #comment {
+	width: 75%;
+}
+
+#respond #commentform .logged-in-as {
+	margin: 0;
+	font-size: 15px;
+	color: grey;
+}
+
+/* =Admin
+----------------------------------------------- */
+.edit-link * {
+	color: green !important;
+}
+
+/* =Categories and Tags
+----------------------------------------------- */
+/* Ensue CSS badassery */
+.tag[rel=tag]:before {
+	content: "#";
+	font-size: 1.4em;
+}
+.category[rel=tag]:before {
+	content: "{";
+	font-size: 1.4em;
+}
+.category[rel=tag]:after {
+	content: "}";
+	font-size: 1.4em;
+}
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-content .site-navigation {
+	overflow: hidden;
+	clear: both;
+}
+.site-content .nav-previous {
+	float: left;
+}
+.site-content .nav-next {
+	float: right;
+}
+
+/* =Selection Color
+----------------------------------------------- */
+
+::-moz-selection {
+	background: #FF0084;
+	color: white;
+}
+
+::-webkit-selection {
+	background: #FF0084;
+	color: white;
+}
+
+::selection {
+	background: #FF0084;
+	color: white;
+}
+
+.highlight {
+	/* Highlight Color */
+	background-color: #FF0084;
+}
